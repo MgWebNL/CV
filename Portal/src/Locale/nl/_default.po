@@ -1,0 +1,8 @@
+msgid "Unitprice"
+msgstr "Eenheidsprijs"
+
+msgid "Unit"
+msgstr "Eenheid"
+
+msgid "Quantity"
+msgstr "Aantal"

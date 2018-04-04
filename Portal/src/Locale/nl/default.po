@@ -1,0 +1,1215 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2017-07-06 14:30+0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Controller/AccountController.php:98
+msgid "Password changed"
+msgstr "Wachtwoord gewijzigd"
+
+msgid "There are no products in your Product Order Advice right now"
+msgstr "Er staan op dit moment geen artikelen in uw besteladvies"
+
+msgid "An error occurred while loading your data"
+msgstr "Er is iets fout gegaan bij het ophalen van de data"
+
+msgid "Show all articles in order advice"
+msgstr "Bekijk het volledige besteladvies"
+
+msgid "Partial sent"
+msgstr "Deels verzonden"
+
+msgid "Last order"
+msgstr "Laatste order"
+
+msgid "Order qty"
+msgstr "Bestellen"
+
+msgid "Product image"
+msgstr "Productafbeelding"
+
+msgid "Payment info"
+msgstr "Betalingsinfo"
+
+msgid "Contacts"
+msgstr "Contactpersonen"
+
+msgid "Newsletters"
+msgstr "Nieuwsbrieven"
+
+msgid "Suggestions"
+msgstr "Ideeënbus"
+
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+msgid "Directly available"
+msgstr "Direct beschikbaar"
+
+msgid "Hi, I'm"
+msgstr "Hallo, ik ben"
+
+msgid "Demanded"
+msgstr "Afgeroepen"
+
+msgid "To demand"
+msgstr "Af te roepen"
+
+msgid "On demand"
+msgstr "Op afroep"
+
+msgid "Demand this article"
+msgstr "Artikel afroepen"
+
+msgid "Also interesting"
+msgstr "Ook interessant"
+
+msgid "Portal tour"
+msgstr "Portal rondleiding"
+
+msgid "I'm your personal account manager"
+msgstr "Ik ben uw persoonlijke accountmanager"
+
+msgid "If you have any questions about quotations, orders, invoices or products, you can contact me"
+msgstr "Als u vragen heeft over offertes, orders, facturen of artikelen kunt u contact met mij opnemen"
+
+msgid "If you don't have telephone software, you can call to contact"
+msgstr "Als u geen telefoonsoftware heeft, kunt u bellen met"
+
+msgid "If your email client doesn't open, you can send an email to"
+msgstr "Als uw emailprogramma niet opent, kunt u mailen met"
+
+msgid "on"
+msgstr "op"
+
+msgid "Call"
+msgstr "Bel"
+
+msgid "No."
+msgstr "Nr."
+
+msgid "Pallet Qty."
+msgstr "Palletaantal"
+
+msgid "How can we help you?"
+msgstr "Hoe kunnen we u helpen?"
+
+msgid "New appointment"
+msgstr "Nieuwe afspraak"
+
+msgid "I will visit you"
+msgstr "Ik kom jullie bezoeken"
+
+msgid "Please visit me"
+msgstr "Kom naar mij toe"
+
+msgid "Reason"
+msgstr "Reden"
+
+msgid "When you submit your request, your accountmanager will contact you about the details of your appointment"
+msgstr "Wanneer u de aanvraag verstuurd, zal uw accountmanager uw afspraak zo snel mogelijk bevestigen"
+
+msgid "Submit"
+msgstr "Verzenden"
+
+msgid "Please enter your new password twice here"
+msgstr "Geef hier 2x uw nieuwe wachtwoord op"
+
+#: Controller/AccountController.php:101
+msgid "The password you provided is not secure. It needs to contain 1 uppercase, 1 lowercase, 1 number and a minimum length of 6 characters."
+msgstr "Uw wachtwoord is niet veilig. Uw wachtwoord moet 1 hoofdletter, 1 kleine letter en 1 cijfer bevatten en minimaal 6 tekens lang zijn."
+
+#: Controller/AccountController.php:101
+msgid "Your password needs to contain 1 uppercase, 1 lowercase, 1 number and a minimum length of 6 characters."
+msgstr "Uw wachtwoord moet 1 hoofdletter, 1 kleine letter en 1 cijfer bevatten en minimaal 6 tekens lang zijn."
+
+#: Controller/AccountController.php:105
+msgid "The passwords you provided are not identical"
+msgstr "Wachtwoorden komen niet overeen"
+
+#: Controller/AccountController.php:109
+msgid "You do not have permissions to visit this page"
+msgstr "U heeft niet de rechten om deze pagina te bezoeken"
+
+#: Controller/AccountController.php:139
+msgid "Your suggestion has been submitted."
+msgstr "Uw tip is verzonden"
+
+#: Controller/AccountController.php:143
+#: Controller/CartController.php:116;135;167;201;218;238;303
+#: Controller/QuotationController.php:122;197
+msgid "You've been redirected here because have no permissions for the page you tried to visit."
+msgstr "U bent hier naartoe geleid omdat u niet de juiste rechten heeft voor de pagina die u wilde bezoeken."
+
+#: Controller/ArticleController.php:110
+msgid "Your article code has been updated"
+msgstr "Uw artikel is bijgewerkt"
+
+#: Controller/ArticleController.php:114
+msgid "You have been redirected to the homepage because you made an illegal request"
+msgstr "U bent naar de startpagina geleid omdat u een ongeldige aanvraag heeft gedaan"
+
+#: Controller/CartController.php:297
+msgid "Your order has successfully been sent. Thank you for your purchase."
+msgstr "Uw bestelling is succesvol verstuurd. Bedankt voor uw aankoop."
+
+#: Controller/QuotationController.php:118
+msgid "Your request has been submitted."
+msgstr "Uw aanvraag is verstuurd."
+
+#: Controller/QuotationController.php:179
+msgid "The change of status of your quote has been sent."
+msgstr "De statuswijziging van uw offerte is verstuurd."
+
+#: Template/Account/index.ctp:9
+msgid "Account"
+msgstr "Account"
+
+#: Template/Account/index.ctp:18
+msgid "Info"
+msgstr "Info"
+
+#: Template/Account/index.ctp:23
+msgid "Personnel"
+msgstr "Personeel"
+
+#: Template/Account/index.ctp:28
+msgid "Addresses"
+msgstr "Adressen"
+
+#: Template/Account/index.ctp:33
+msgid "Emails"
+msgstr "Emails"
+
+#: Template/Account/index.ctp:38
+msgid "Settings"
+msgstr "Instellingen"
+
+#: Template/Account/index.ctp:43
+msgid "Users"
+msgstr "Gebruikers"
+
+#: Template/Account/index.ctp:65
+msgid "Company name"
+msgstr "Bedrijfsnaam"
+
+#: Template/Account/index.ctp:69
+msgid "Street + no."
+msgstr "Straat + nr."
+
+#: Template/Account/index.ctp:73
+msgid "Postal code"
+msgstr "Postcode"
+
+#: Template/Account/index.ctp:77
+msgid "Town"
+msgstr "Plaats"
+
+#: Template/Account/index.ctp:81
+msgid "Country"
+msgstr "Land"
+
+#: Template/Account/index.ctp:85
+msgid "Email address"
+msgstr "Emailadres"
+
+#: Template/Account/index.ctp:89
+msgid "Website"
+msgstr "Website"
+
+#: Template/Account/index.ctp:97
+msgid "Telephone"
+msgstr "Telefoon"
+
+#: Template/Account/index.ctp:105
+msgid "Account manager"
+msgstr "Accountmanager"
+
+#: Template/Account/index.ctp:121
+msgid "Bank account"
+msgstr "Bankrekening"
+
+#: Template/Account/index.ctp:125
+#: Template/Invoice/view.ctp:98
+msgid "VAT no."
+msgstr "BTW nr."
+
+#: Template/Account/index.ctp:129
+msgid "Payment conditions"
+msgstr "Betalingsconditie"
+
+#: Template/Account/index.ctp:133
+msgid "Payment method"
+msgstr "Betaalwijze"
+
+#: Template/Account/index.ctp:137
+msgid "Pay rate"
+msgstr "Betaalsnelheid"
+
+#: Template/Account/index.ctp:138
+#: Template/Article/view.ctp:101
+msgid "days"
+msgstr "dagen"
+
+#: Template/Account/index.ctp:141
+#: Template/Invoice/index.ctp:30
+#: Template/Invoice/overview.ctp:47
+#: Template/Invoice/view.ctp:217
+msgid "Open amount"
+msgstr "Openstaand"
+
+#: Template/Account/index.ctp:145
+msgid "Part expired"
+msgstr "Deels vervallen"
+
+#: Template/Account/index.ctp:171
+msgid "Contact type"
+msgstr "Type"
+
+#: Template/Account/index.ctp:174
+msgid "Type"
+msgstr "Type"
+
+#: Template/Account/index.ctp:174
+msgid "Active"
+msgstr "Actief"
+
+#: Template/Account/index.ctp:176
+msgid "Quote"
+msgstr "Offerte"
+
+#: Template/Account/index.ctp:177
+#: Template/Article/view.ctp:153
+#: Template/Order/view.ctp:12
+msgid "Order"
+msgstr "Order"
+
+#: Template/Account/index.ctp:178
+#: Template/Cart/address.ctp:110
+#: Template/Cart/payment.ctp:52
+#: Template/Cart/summary.ctp:106
+#: Template/Invoice/view.ctp:11
+msgid "Invoice"
+msgstr "Factuur"
+
+#: Template/Account/index.ctp:179
+msgid "Purchase"
+msgstr "Inkoop"
+
+#: Template/Account/index.ctp:180
+msgid "Packinglist"
+msgstr "Pakbon"
+
+#: Template/Account/index.ctp:214
+#: Template/Invoice/view.ctp:20
+#: Template/Order/view.ctp:30
+msgid "Delivery address"
+msgstr "Afleveradres"
+
+#: Template/Account/index.ctp:246
+#: Template/Layout/default.ctp:46
+msgid "Type your new password"
+msgstr "Typ hier uw nieuwe wachtwoord"
+
+#: Template/Account/index.ctp:249
+#: Template/Layout/default.ctp:49
+msgid "Retype your new password"
+msgstr "Typ hier nogmaals uw nieuwe wachtwoord"
+
+#: Template/Account/index.ctp:254
+#: Template/Layout/default.ctp:54
+msgid "Update password"
+msgstr "Update wachtwoord"
+
+#: Template/Account/index.ctp:282
+msgid "Please, rate us"
+msgstr "Beoordeel ons"
+
+#: Template/Account/index.ctp:282
+msgid "You already rated us with"
+msgstr "U heeft ons al beoordeeld met een"
+
+#: Template/Account/index.ctp:297
+msgid "Company info"
+msgstr "Bedrijfsinfo"
+
+#: Template/Account/index.ctp:307
+msgid "Special offers"
+msgstr "Aanbiedingen"
+
+#: Template/Account/index.ctp:316
+msgid "Our partners"
+msgstr "Onze partners"
+
+#: Template/Account/index.ctp:345
+msgid "Send suggestions"
+msgstr "Verstuur tip"
+
+#: Template/Account/index.ctp:372
+msgid "Saving your newsletter preferences failed !"
+msgstr "Uw voorkeuren konden niet worden opgeslagen"
+
+#: Template/Article/index.ctp:9
+#: Template/Element/menu.ctp:43
+#: Template/Search/results.ctp:102
+msgid "Articles"
+msgstr "Artikelen"
+
+#: Template/Article/index.ctp:16
+#: Template/Cart/index.ctp:22
+#: Template/Element/Dashboard/orderAdvice.ctp:17
+#: Template/Invoice/index.ctp:17
+#: Template/Invoice/overview.ctp:20
+#: Template/Order/index.ctp:27
+#: Template/Quotation/index.ctp:23
+#: Template/Recommendation/index.ctp:16
+#: Template/Search/results.ctp:18
+#: Template/Tracktrace/index.ctp:16
+msgid "No items available"
+msgstr "Geen items beschikbaar"
+
+#: Template/Article/view.ctp:9
+msgid "Article basics"
+msgstr "Basisgegevens"
+
+#: Template/Article/view.ctp:15
+#: Template/Order/index.ctp:81
+#: Template/Order/view.ctp:145
+msgid "Article code"
+msgstr "Artikelcode"
+
+#: Template/Article/view.ctp:20
+msgid "My code"
+msgstr "Mijn code"
+
+#: Template/Article/view.ctp:38;257;303
+#: Template/Cart/address.ctp:162
+#: Template/Cart/index-cart-xs.ctp:6
+#: Template/Cart/index-cart.ctp:9
+#: Template/Cart/summary.ctp:158
+#: Template/Invoice/view.ctp:137
+#: Template/Order/index.ctp:39
+#: Template/Order/view.ctp:71;187
+#: Template/Quotation/index.ctp:35
+#: Template/Quotation/view.ctp:34;110
+msgid "Description"
+msgstr "Omschrijving"
+
+#: Template/Article/view.ctp:43
+msgid "Dimensions"
+msgstr "Afmetingen"
+
+#: Template/Article/view.ctp:52
+msgid "Quality"
+msgstr "Kwaliteit"
+
+#: Template/Article/view.ctp:53
+#: Template/Invoice/index.ctp:37
+#: Template/Invoice/overview.ctp:60
+#: Template/Order/index.ctp:47
+#: Template/Quotation/index.ctp:42
+msgid "N/A"
+msgstr "N/B"
+
+#: Template/Article/view.ctp:57
+msgid "Sales unit"
+msgstr "Verkoopeenheid"
+
+#: Template/Article/view.ctp:62
+msgid "Stock item"
+msgstr "Voorraadartikel"
+
+#: Template/Article/view.ctp:63
+msgid "Yes"
+msgstr "Ja"
+
+#: Template/Article/view.ctp:63
+#: Template/Element/Modal/approveQuote.ctp:14
+msgid "No"
+msgstr "Nee"
+
+#: Template/Article/view.ctp:75;82
+msgid "EAN code"
+msgstr "EAN-code"
+
+#: Template/Article/view.ctp:93
+msgid "Additional info"
+msgstr "Extra info"
+
+#: Template/Article/view.ctp:100
+msgid "Delivery time"
+msgstr "Bezorgtijd"
+
+#: Template/Article/view.ctp:105
+msgid "Article usage"
+msgstr "Artikelverbruik"
+
+#: Template/Article/view.ctp:107
+msgid "a month"
+msgstr "per maand"
+
+#: Template/Article/view.ctp:112
+msgid "Latest order qty."
+msgstr "Laatst bestelde aantal"
+
+#: Template/Article/view.ctp:120
+msgid "Ideal order qty."
+msgstr "Ideaal bestelaantal"
+
+#: Template/Article/view.ctp:128
+msgid "Your savings"
+msgstr "Uw besparing"
+
+#: Template/Article/view.ctp:136
+msgid "Next order date"
+msgstr "Besteldatum"
+
+#: Template/Article/view.ctp:142
+msgid "Notify"
+msgstr "Melding"
+
+#: Template/Article/view.ctp:145
+msgid "When type is frequent"
+msgstr "Als type REGULIER is"
+
+#: Template/Article/view.ctp:146
+msgid "Always"
+msgstr "Altijd"
+
+#: Template/Article/view.ctp:147
+msgid "Never"
+msgstr "Nooit"
+
+#: Template/Article/view.ctp:175
+msgid "Article pricing"
+msgstr "Staffelprijzen"
+
+msgid "Default pricing"
+msgstr "Standaardprijzen"
+
+#: Template/Article/view.ctp:182;258;304;337
+#: Template/Invoice/view.ctp:138
+#: Template/Order/view.ctp:188
+#: Template/Quotation/view.ctp:111
+msgid "Quantity"
+msgstr "Aantal"
+
+#: Template/Article/view.ctp:183
+#: Template/Cart/index-cart-xs.ctp:7
+#: Template/Cart/index-cart.ctp:10
+msgid "Price"
+msgstr "Prijs"
+
+#: Template/Article/view.ctp:200
+msgid "No default prices available"
+msgstr "Geen standaard prijzen beschikbaar"
+
+#: Template/Article/view.ctp:216
+msgid "Article history"
+msgstr "Artikelhistorie"
+
+#: Template/Article/view.ctp:232
+#: Template/Element/menu.ctp:24
+#: Template/Order/index.ctp:15
+#: Template/Search/results.ctp:50
+msgid "Orders"
+msgstr "Orders"
+
+#: Template/Article/view.ctp:237
+msgid "Quotes"
+msgstr "Offertes"
+
+#: Template/Article/view.ctp:242
+#: Template/Element/menu.ctp:34
+#: Template/Invoice/index.ctp:10
+#: Template/Invoice/overview.ctp:12
+#: Template/Search/results.ctp:76
+msgid "Invoices"
+msgstr "Facturen"
+
+#: Template/Article/view.ctp:254;255
+msgid "Reference"
+msgstr "Referentie"
+
+#: Template/Article/view.ctp:256;302;336
+#: Template/Invoice/index.ctp:27
+#: Template/Invoice/overview.ctp:44
+#: Template/Order/index.ctp:38
+#: Template/Quotation/index.ctp:34
+msgid "Date"
+msgstr "Datum"
+
+#: Template/Article/view.ctp:268;275;283;316
+#: Template/Invoice/index.ctp:41
+#: Template/Invoice/overview.ctp:64
+#: Template/Invoice/view.ctp:73;107;117
+#: Template/Order/index.ctp:54;68;88
+#: Template/Order/view.ctp:75;85;95;132;152
+#: Template/Quotation/view.ctp:38;48
+msgid "Not available"
+msgstr "Niet beschikbaar"
+
+#: Template/Article/view.ctp:391
+msgid "Saving your notification preferences failed !"
+msgstr "Opslaan van uw voorkeuren is mislukt !"
+
+#: Template/Calendar/index.ctp:12
+msgid "Month"
+msgstr "Maand"
+
+#: Template/Calendar/index.ctp:13
+msgid "Week"
+msgstr "Week"
+
+#: Template/Calendar/index.ctp:28
+msgid "Order advice articles"
+msgstr "Besteladvies artikelen"
+
+#: Template/Calendar/index.ctp:57
+msgid "Show article"
+msgstr "Bekijk artikel"
+
+#: Template/Cart/address.ctp:17
+#: Template/Cart/index.ctp:15
+#: Template/Cart/payment.ctp:14
+#: Template/Cart/summary.ctp:16
+#: Template/Element/cart.ctp:13
+msgid "Shopping cart"
+msgstr "Winkelwagen"
+
+#: Template/Cart/address.ctp:24;163
+#: Template/Cart/index-cart-xs.ctp:8
+#: Template/Cart/index-cart.ctp:11
+#: Template/Cart/payment.ctp:21
+#: Template/Cart/summary.ctp:23;159
+msgid "Qty"
+msgstr "Aantal"
+
+#: Template/Cart/address.ctp:38;236
+#: Template/Cart/payment.ctp:35
+#: Template/Cart/summary.ctp:37
+msgid "Edit cart"
+msgstr "Winkelwagen aanpassen"
+
+#: Template/Cart/address.ctp:55
+#: Template/Cart/summary.ctp:55
+msgid "Deliver"
+msgstr "Bezorgen"
+
+#: Template/Cart/address.ctp:56
+#: Template/Cart/summary.ctp:56
+msgid "Deliver at your office or an other delivery address"
+msgstr "Laten bezorgen bij uw bedrijf of een ander afleveradres"
+
+#: Template/Cart/address.ctp:62
+#: Template/Cart/summary.ctp:62
+msgid "Your order will be delivered at"
+msgstr "Uw order wordt geleverd op"
+
+#: Template/Cart/address.ctp:73
+msgid "Change address"
+msgstr "Verander adres"
+
+#: Template/Cart/address.ctp:84
+#: Template/Cart/summary.ctp:79
+msgid "Pick up"
+msgstr "Afhalen"
+
+#: Template/Cart/address.ctp:85
+#: Template/Cart/summary.ctp:80
+msgid "Pick up your order at our warehouse"
+msgstr "Haal uw order af in ons magazijn"
+
+#: Template/Cart/address.ctp:91
+#: Template/Cart/summary.ctp:86
+msgid "You can pick up your order at"
+msgstr "U kunt uw order afhalen op"
+
+#: Template/Cart/address.ctp:111
+#: Template/Cart/summary.ctp:107
+msgid "Your invoice will be sent to this address"
+msgstr "Uw factuur zal naar dit adres gestuurd worden"
+
+#: Template/Cart/address.ctp:134
+#: Template/Cart/summary.ctp:130
+msgid "Delivery as soon as posible"
+msgstr "Levering zo snel mogelijk"
+
+#: Template/Cart/address.ctp:135
+#: Template/Cart/summary.ctp:131
+msgid "Your order will be sent when it's complete"
+msgstr "Uw order wordt bezorgd zodra deze compleet is"
+
+#: Template/Cart/address.ctp:141
+#: Template/Cart/summary.ctp:137
+msgid "Estimated delivery date"
+msgstr "Verwachte leverdatum"
+
+#: Template/Cart/address.ctp:152;164
+#: Template/Cart/summary.ctp:148;160
+#: Template/Order/index.ctp:41;78;81
+#: Template/Order/view.ctp:128;142;145
+msgid "Delivery date"
+msgstr "Leverdatum"
+
+#: Template/Cart/address.ctp:153
+#: Template/Cart/summary.ctp:149
+msgid "Your items will be delivered separately"
+msgstr "Uw artikelen worden afzonderlijk geleverd"
+
+#: Template/Cart/address.ctp:204
+#: Template/Cart/summary.ctp:217
+#: Template/Invoice/view.ctp:112
+msgid "Your reference"
+msgstr "Uw referentie"
+
+#: Template/Cart/address.ctp:205
+#: Template/Cart/summary.ctp:218
+msgid "Add a reference to your order"
+msgstr "Voeg een referentie toe aan uw order"
+
+#: Template/Cart/address.ctp:221
+#: Template/Cart/summary.ctp:234
+msgid "Remarks"
+msgstr "Opmerkingen"
+
+#: Template/Cart/address.ctp:222
+#: Template/Cart/summary.ctp:235
+msgid "Add a remark to your order"
+msgstr "Voeg een opmerking toe aan uw order"
+
+#: Template/Cart/address.ctp:239
+msgid "Overview"
+msgstr "Overzicht"
+
+#: Template/Cart/index-cart-xs.ctp:9
+#: Template/Cart/index-cart.ctp:12
+#: Template/Invoice/index.ctp:28
+#: Template/Invoice/overview.ctp:45
+#: Template/Invoice/view.ctp:143
+#: Template/Order/view.ctp:193
+msgid "Amount"
+msgstr "Bedrag"
+
+#: Template/Cart/index-cart-xs.ctp:45
+#: Template/Cart/index-cart.ctp:66
+#: Template/Invoice/view.ctp:170
+#: Template/Order/view.ctp:221
+msgid "Subtotal"
+msgstr "Subtotaal"
+
+#: Template/Cart/index-cart-xs.ctp:52
+#: Template/Cart/index-cart.ctp:73
+#: Template/Element/cart.ctp:47
+msgid "Transport"
+msgstr "Transport"
+
+#: Template/Cart/index-cart-xs.ctp:59
+#: Template/Cart/index-cart.ctp:80
+#: Template/Invoice/view.ctp:181
+#: Template/Order/view.ctp:232
+msgid "VAT"
+msgstr "BTW"
+
+#: Template/Cart/index-cart-xs.ctp:66
+#: Template/Cart/index-cart.ctp:87
+msgid "TOTAL"
+msgstr "TOTAAL"
+
+#: Template/Cart/index.ctp:33
+msgid "Home"
+msgstr "Start"
+
+#: Template/Cart/index.ctp:37
+msgid "Empty cart"
+msgstr "Leeg winkelwagen"
+
+#: Template/Cart/index.ctp:42
+msgid "Order now"
+msgstr "Bestellen"
+
+#: Template/Cart/index.ctp:46
+msgid "Update cart"
+msgstr "Update winkelwagen"
+
+#: Template/Cart/payment.ctp:53
+#: Template/Cart/summary.ctp:192
+msgid "Pay after delivery"
+msgstr "Betalen na levering"
+
+#: Template/Cart/payment.ctp:59
+#: Template/Cart/summary.ctp:198
+msgid "Your invoice will be sent to"
+msgstr "Uw factuur wordt verzonden naar"
+
+#: Template/Cart/payment.ctp:76
+msgid "Online payment"
+msgstr "Online betaling"
+
+#: Template/Cart/payment.ctp:77
+msgid "Pay your invoice in advance"
+msgstr "Betaal uw factuur vooraf"
+
+#: Template/Cart/payment.ctp:83
+msgid "After confirmation you will be redirected to MultiSavePay"
+msgstr "Na bevestiging wordt u doorgestuurd naar MultiSavePay"
+
+#: Template/Cart/payment.ctp:96
+msgid "Coupon code"
+msgstr "Kortingscode"
+
+#: Template/Cart/payment.ctp:97
+msgid "Redeem your discount here"
+msgstr "Claim uw korting hier"
+
+#: Template/Cart/payment.ctp:110
+msgid "Edit addresses"
+msgstr "Wijzig adressen"
+
+#: Template/Cart/payment.ctp:113
+msgid "Payment"
+msgstr "Betaling"
+
+#: Template/Cart/summary.ctp:45
+msgid "Summary"
+msgstr "Overzicht"
+
+#: Template/Cart/summary.ctp:191
+msgid "Payment by invoice"
+msgstr "Betaling op factuur"
+
+#: Template/Cart/summary.ctp:249
+msgid "Edit address"
+msgstr "Verander adres"
+
+#: Template/Cart/summary.ctp:252
+msgid "Send order"
+msgstr "Verzend order"
+
+#: Template/Element/cart.ctp:21
+msgid "No items in your cart yet"
+msgstr "Geen items in uw winkelwagen"
+
+#: Template/Element/cart.ctp:42
+msgid "more items in cart"
+msgstr "extra items"
+
+#: Template/Element/cart.ctp:51
+msgid "Total"
+msgstr "Totaal"
+
+#: Template/Element/cart.ctp:57
+msgid "View All"
+msgstr "Bekijk alles"
+
+#: Template/Element/header.ctp:59
+msgid "Type your keywords here"
+msgstr "Typ hier uw zoekwoorden"
+
+#: Template/Element/menu.ctp:11
+msgid "Calendar"
+msgstr "Agenda"
+
+#: Template/Element/menu.ctp:14
+#: Template/Quotation/index.ctp:11
+#: Template/Search/results.ctp:24
+msgid "Quotations"
+msgstr "Offertes"
+
+#: Template/Element/menu.ctp:16;26;36;45
+msgid "All"
+msgstr "Alles"
+
+#: Template/Element/menu.ctp:17;27
+msgid "Pending"
+msgstr "Lopend"
+
+#: Template/Element/menu.ctp:18
+msgid "Ordered"
+msgstr "Besteld"
+
+#: Template/Element/menu.ctp:19
+msgid "Canceled"
+msgstr "Geannuleerd"
+
+#: Template/Element/menu.ctp:28
+msgid "Sent"
+msgstr "Verzonden"
+
+#: Template/Element/menu.ctp:29
+msgid "Delivered"
+msgstr "Afgeleverd"
+
+#: Template/Element/menu.ctp:37
+msgid "Open"
+msgstr "Openstaand"
+
+#: Template/Element/menu.ctp:38
+#: Template/Invoice/view.ctp:206
+msgid "Paid"
+msgstr "Betaald"
+
+#: Template/Element/menu.ctp:46
+msgid "Frequent"
+msgstr "Regulier"
+
+#: Template/Element/menu.ctp:47
+msgid "Occasional"
+msgstr "Incidenteel"
+
+#: Template/Element/menu.ctp:48
+msgid "History"
+msgstr "Historie"
+
+#: Template/Element/menu.ctp:52
+msgid "Webshop"
+msgstr "Webshop"
+
+#: Template/Element/notifications.ctp:9
+msgid "Notifications"
+msgstr "Meldingen"
+
+#: Template/Element/pagehelp.ctp:15
+msgid "Page help"
+msgstr "Paginahulp"
+
+#: Template/Element/pagehelp.ctp:31
+msgid "Help me"
+msgstr "Help mij"
+
+#: Template/Element/preloader.ctp:8
+msgid "Please wait"
+msgstr "Even geduld a.u.b."
+
+#: Template/Element/Dashboard/invoiceExpired.ctp:22
+msgid "Expired invoices"
+msgstr "Vervallen facturen"
+
+#: Template/Element/Dashboard/invoiceOpen.ctp:13
+msgid "Open invoices"
+msgstr "Open facturen"
+
+#: Template/Element/Dashboard/orderAdvice.ctp:11
+msgid "Order advice"
+msgstr "Besteladvies"
+
+#: Template/Element/Dashboard/orders.ctp:13
+msgid "Pending orders"
+msgstr "Lopende orders"
+
+#: Template/Element/Dashboard/quotes.ctp:13
+msgid "Pending quotations"
+msgstr "Lopende offertes"
+
+#: Template/Element/Dashboard/recommended.ctp:13
+#: Template/Recommendation/index.ctp:9
+msgid "Recommendations"
+msgstr "Aanbevelingen"
+
+#: Template/Element/Dashboard/trackTrace.ctp:13
+#: Template/Tracktrace/index.ctp:9
+msgid "Track & Trace"
+msgstr "Track & Trace"
+
+#: Template/Element/Modal/approveQuote.ctp:7
+msgid "Approve quote"
+msgstr "Offerte goedkeuren"
+
+#: Template/Element/Modal/approveQuote.ctp:10
+msgid "Are you sure you want to approve this quote?"
+msgstr "Weet u zeker dat u deze offerte wilt goedkeuren?"
+
+#: Template/Element/Modal/approveQuote.ctp:15
+msgid "Yes, approve quote"
+msgstr "Ja, offerte goedkeuren"
+
+#: Template/Element/Modal/cart-delivery-address.ctp:6
+msgid "Edit delivery address"
+msgstr "Afleveradres wijzigen"
+
+#: Template/Element/Modal/cart-delivery-address.ctp:18
+#: Template/Element/Modal/cart-delivery-date.ctp:13
+#: Template/Element/Modal/editQuote.ctp:14
+#: Template/Element/Modal/rejectQuote.ctp:14
+#: Template/Element/Modal/request.ctp:13
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: Template/Element/Modal/cart-delivery-address.ctp:19
+#: Template/Element/Modal/cart-delivery-date.ctp:14
+msgid "Save"
+msgstr "Opslaan"
+
+#: Template/Element/Modal/cart-delivery-date.ctp:6
+msgid "Edit delivery date"
+msgstr "Leverdatum aanpassen"
+
+#: Template/Element/Modal/editQuote.ctp:7
+#: Template/Quotation/view.ctp:88
+msgid "Edit quote"
+msgstr "Offerte aanpassen"
+
+#: Template/Element/Modal/editQuote.ctp:10
+msgid "Please enter a reason for cancellation here"
+msgstr "Geef hier de reden van annulering op a.u.b."
+
+#: Template/Element/Modal/editQuote.ctp:15
+msgid "Submit changes"
+msgstr "Wijzigingen versturen"
+
+#: Template/Element/Modal/rejectQuote.ctp:7
+#: Template/Quotation/view.ctp:89
+msgid "Reject quote"
+msgstr "Offerte afkeuren"
+
+#: Template/Element/Modal/rejectQuote.ctp:10
+msgid "Are you sure you want to reject and cancel this quote?"
+msgstr "Weet u zeker dat u deze offerte wilt afkeuren en annuleren?"
+
+#: Template/Element/Modal/rejectQuote.ctp:15
+msgid "Reject and cancel quote"
+msgstr "Afkeuren en annuleren"
+
+#: Template/Element/Modal/request.ctp:7
+#: Template/Order/index.ctp:17;18
+#: Template/Quotation/index.ctp:13;14
+msgid "New request"
+msgstr "Nieuwe aanvraag"
+
+#: Template/Element/Modal/request.ctp:10
+msgid "You can make a new order request here"
+msgstr "U kunt hier een nieuwe aanvraag doen"
+
+#: Template/Element/Modal/request.ctp:14
+msgid "Send request"
+msgstr "Verstuur aanvraag"
+
+#: Template/Invoice/index.ctp:29
+#: Template/Invoice/overview.ctp:46
+#: Template/Invoice/view.ctp:69
+msgid "Expiry date"
+msgstr "Vervaldatum"
+
+#: Template/Invoice/index.ctp:31
+#: Template/Invoice/overview.ctp:48
+#: Template/Order/index.ctp:40
+#: Template/Quotation/index.ctp:36
+msgid "Status"
+msgstr "Status"
+
+#: Template/Invoice/overview.ctp:26
+msgid "To pay your open invoices, tick the checkboxes and click the Pay-button"
+msgstr "Om uw openstaande facturen te betalen, gebruikt u de vinkvelden en klikt u op de Betaal-knop"
+
+#: Template/Invoice/overview.ctp:30;87
+msgid "Pay"
+msgstr "Betalen"
+
+#: Template/Invoice/overview.ctp:81
+msgid "invoice(s) selected"
+msgstr "facturen geselecteerd"
+
+#: Template/Invoice/view.ctp:26;46
+#: Template/Order/view.ctp:35;52
+#: Template/Quotation/view.ctp:66
+msgid "attn."
+msgstr "t.a.v."
+
+#: Template/Invoice/view.ctp:33
+msgid "No delivery address available"
+msgstr "Geen afleveradres beschikbaar"
+
+#: Template/Invoice/view.ctp:41
+#: Template/Order/view.ctp:47
+msgid "Invoice address"
+msgstr "Factuuradres"
+
+#: Template/Invoice/view.ctp:61
+msgid "Invoice no."
+msgstr "Factuurnr."
+
+#: Template/Invoice/view.ctp:65
+msgid "Invoice date"
+msgstr "Factuurdatum"
+
+#: Template/Invoice/view.ctp:79
+#: Template/Order/view.ctp:67
+msgid "Order no."
+msgstr "Ordernr."
+
+#: Template/Invoice/view.ctp:86
+msgid "No order numbers available"
+msgstr "Geen ordernummers beschikbaar"
+
+#: Template/Invoice/view.ctp:94
+msgid "Customer no."
+msgstr "Klantnr."
+
+#: Template/Invoice/view.ctp:102
+#: Template/Order/view.ctp:91
+#: Template/Quotation/view.ctp:54
+msgid "Your cont. person"
+msgstr "Uw cont.persoon"
+
+#: Template/Invoice/view.ctp:135
+#: Template/Order/view.ctp:185
+#: Template/Quotation/view.ctp:108
+msgid "Article no."
+msgstr "Art.code"
+
+#: Template/Invoice/view.ctp:139
+#: Template/Order/view.ctp:189
+#: Template/Quotation/view.ctp:112
+msgid "Unit"
+msgstr "Eenheid"
+
+#: Template/Invoice/view.ctp:141
+#: Template/Order/view.ctp:191
+#: Template/Quotation/view.ctp:114
+msgid "Unitprice"
+msgstr "Eenheidsprijs"
+
+#: Template/Invoice/view.ctp:192
+#: Template/Order/view.ctp:243
+msgid "Total amount"
+msgstr "Totaalbedrag"
+
+#: Template/Invoice/view.ctp:239
+msgid "Pay invoice"
+msgstr "Betaal factuur"
+
+#: Template/Invoice/view.ctp:248
+msgid "No invoice rules available"
+msgstr "Geen factuurregels beschikbaar"
+
+#: Template/Layout/default.ctp:40
+msgid "Change password"
+msgstr "Verander wachtwoord"
+
+#: Template/Layout/error.ctp:35
+#: Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr "Fout"
+
+#: Template/Layout/error.ctp:43
+msgid "Back"
+msgstr "Terug"
+
+#: Template/Order/index.ctp:97
+#: Template/Order/view.ctp:161
+msgid "More info"
+msgstr "Meer info"
+
+#: Template/Order/view.ctp:19
+msgid "Re-order order"
+msgstr "Opnieuw bestellen"
+
+#: Template/Order/view.ctp:81
+#: Template/Quotation/view.ctp:44
+msgid "Your ref."
+msgstr "Uw ref."
+
+#: Template/Order/view.ctp:104
+msgid "Order status"
+msgstr "Orderstatus"
+
+#: Template/Order/view.ctp:117
+msgid "Shipment"
+msgstr "Zending"
+
+#: Template/Order/view.ctp:124
+msgid "Order date"
+msgstr "Orderdatum"
+
+#: Template/Order/view.ctp:168
+msgid "Our cont. person"
+msgstr "Onze cont.persoon"
+
+#: Template/Quotation/view.ctp:16
+msgid "Quotation"
+msgstr "Offerte"
+
+#: Template/Quotation/view.ctp:26
+msgid "Quote date"
+msgstr "Offertedatum"
+
+#: Template/Quotation/view.ctp:30
+msgid "Quote no."
+msgstr "Offertenr."
+
+#: Template/Quotation/view.ctp:61
+msgid "Your address"
+msgstr "Uw adres"
+
+#: Template/Quotation/view.ctp:75
+msgid "Current status"
+msgstr "Huidige status"
+
+#: Template/Quotation/view.ctp:80
+msgid "Edit status"
+msgstr "Wijzig status"
+
+#: Template/Quotation/view.ctp:84
+msgid "Make a choice"
+msgstr "Maak een keuze"
+
+#: Template/Quotation/view.ctp:87
+msgid "Aprove quote"
+msgstr "Offerte goedkeuren"
+
+#: Template/Recommendation/index.ctp:32
+msgid "Show"
+msgstr "Bekijk"
+
+#: Template/Search/results.ctp:11
+msgid "Searchresults"
+msgstr "Zoekresultaten"
+
+#: Template/Search/results.ctp:11
+msgid "results for"
+msgstr "resultaten voor"
+
+#: Template/Search/results.ctp:11
+msgid "Art.code"
+msgstr "Art.code"
+
+#: Template/Error/error400.ctp:37
+msgid "The requested address {0} was not found on this server."
+msgstr "De opgevraagde URL {0} bestaat niet!"
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr "Er is een fout opgetreden"
+
+msgid "Days open"
+msgstr "Dagen open"
+
+msgid "Paid after"
+msgstr "Betaald na"
+
+msgid "Close"
+msgstr "Sluiten"
+
+msgid "Time"
+msgstr "Tijd"
+
+msgid "Visit from "
+msgstr "Bezoek van "
+
+msgid "Visit"
+msgstr "Bezoek"
+
+msgid "Visitor"
+msgstr "Bezoeker"
