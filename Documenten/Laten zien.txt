@@ -1,0 +1,39 @@
+*   Code laten zien, zie deze GIT
+
+*   Hodi Online
+    --> Frontend
+    --> Multishop
+    --> OCI Punchout
+
+*   Hodi Orders
+    --> Front- en Backend
+    --> WMS
+    --> Doc Sync GLS
+
+*   Hodi Portal / Panel
+    --> ManagementPanel - Klantportaal
+
+*   Pack n Trace
+    --> Front- en Backend
+    --> API Van Eck
+
+*   Magazijnmodule
+    --> Front- en Backend
+    --> Cake Multi DB
+
+*   MySQL
+    --> Complexe queries / views
+
+*   Illustrator + Photoshop
+*   Office 2010/2013/2016/365 --> Excel (!!)
+*   Windows Server 2012/2016
+*   Linux - CentOS - DirectAdmin - SSH
+*   Apache - XAMPP
+
+
+*   Aansturen collega's
+    --> Directe collega
+    --> Externe partijen
+    --> Stagairs HAN / RijnIJssel
+
+*
