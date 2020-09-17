@@ -1,0 +1,44 @@
+PenD\Docker\Application\Model\Blobsmetadata:
+    type: entity
+    table: BlobsMetadata
+    indexes:
+        IDX_F3AD8363ECE2399E:
+            columns:
+                - BlobId
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: Name
+        value:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: Value
+    manyToOne:
+        blobid:
+            targetEntity: PenD\Docker\Application\Model\Blobs
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                BlobId:
+                    referencedColumnName: Id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

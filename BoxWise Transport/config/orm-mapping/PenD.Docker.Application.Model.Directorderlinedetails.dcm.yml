@@ -1,0 +1,78 @@
+PenD\Docker\Application\Model\Directorderlinedetails:
+    type: entity
+    table: DirectOrderLineDetails
+    indexes:
+        IDX_305314A0AB5ACD4B:
+            columns:
+                - DirectOrderLine_fk
+    id:
+        directorderlinedetailsPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: DirectOrderLineDetails_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        itemidentificationnumber:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ItemIdentificationNumber
+        itemidentificationquantity:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            column: ItemIdentificationQuantity
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        directorderlineFk:
+            targetEntity: PenD\Docker\Application\Model\Directorderlines
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                DirectOrderLine_fk:
+                    referencedColumnName: DirectOrderLines_pk
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,86 @@
+PenD\Docker\Application\Model\Licenseplateauditlog:
+    type: entity
+    table: LicensePlateAuditLog
+    indexes:
+        IDX_7CDE9EE624A31E3B:
+            columns:
+                - LicensePlate_fk
+    id:
+        licenseplateauditlogPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: LicensePlateAuditLog_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        oldstatus:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: OldStatus
+        newstatus:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: NewStatus
+        description:
+            type: string
+            nullable: true
+            length: 512
+            options:
+                fixed: false
+            column: Description
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        licenseplateFk:
+            targetEntity: PenD\Docker\Application\Model\Licenseplates
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                LicensePlate_fk:
+                    referencedColumnName: LicensePlate_pk
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

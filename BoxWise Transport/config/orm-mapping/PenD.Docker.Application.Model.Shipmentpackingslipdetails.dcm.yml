@@ -1,0 +1,128 @@
+PenD\Docker\Application\Model\Shipmentpackingslipdetails:
+    type: entity
+    table: ShipmentPackingSlipDetails
+    id:
+        shipmentpackingslipdetailsPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ShipmentPackingSlipDetails_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        shipmentpackageitemsFk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ShipmentPackageItems_fk
+        hscode:
+            type: string
+            nullable: true
+            length: 25
+            options:
+                fixed: false
+            column: HsCode
+        hscodedescription:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: HsCodeDescription
+        countryoforigin:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CountryOfOrigin
+        reasonofexport:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: ReasonOfExport
+        quality:
+            type: string
+            nullable: true
+            length: 64
+            options:
+                fixed: false
+            column: Quality
+        composition:
+            type: string
+            nullable: true
+            length: 128
+            options:
+                fixed: false
+            column: Composition
+        assemblyinstructions:
+            type: text
+            nullable: true
+            length: -1
+            options:
+                fixed: false
+            column: AssemblyInstructions
+        grossweight:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            options:
+                default: '0'
+            column: GrossWeight
+        weightunitofmeasurement:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: WeightUnitOfMeasurement
+        quantitycubicmeters:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityCubicMeters
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

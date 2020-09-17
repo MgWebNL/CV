@@ -1,0 +1,145 @@
+PenD\Docker\Application\Model\Batchitems:
+    type: entity
+    table: BatchItems
+    id:
+        batchitemsPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: BatchItems_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        batchesFk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Batches_fk
+        batchlocationtype:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+            column: BatchLocationType
+        itemcode:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ItemCode
+        itemdescription:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: ItemDescription
+        itemidentificationnumber:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemIdentificationNumber
+        itemidentificationtype:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemIdentificationType
+        salesorderid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: SalesOrderId
+        salesordercreatedon:
+            type: datetime
+            nullable: true
+            column: SalesOrderCreatedOn
+        salesorderlineid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: SalesOrderLineId
+        warehouseallocated:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: WarehouseAllocated
+        warehouselocationallocated:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: WarehouseLocationAllocated
+        differfromroute:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: DifferFromRoute
+        quantityallocated:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityAllocated
+        quantitypicked:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityPicked
+        quantitydifferfromroute:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityDifferFromRoute
+        createdon:
+            type: datetime
+            nullable: false
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

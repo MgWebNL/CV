@@ -1,0 +1,84 @@
+PenD\Docker\Application\Model\Blobs:
+    type: entity
+    table: Blobs
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        containername:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: ContainerName
+        blobname:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: BlobName
+        originalfilename:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: OriginalFileName
+        mimetype:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: MimeType
+        filesize:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: FileSize
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

@@ -1,0 +1,175 @@
+PenD\Docker\Application\Model\Log:
+    type: entity
+    table: Log
+    indexes:
+        IX_Log_UserName_ClientName:
+            columns:
+                - UserName
+                - ClientName
+        LOG_CREATEDON_INDEX:
+            columns:
+                - CreatedOn
+        LOG__EVTTYPE_CREATEDON_INDEX:
+            columns:
+                - EventType
+                - CreatedOn
+    id:
+        logPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Log_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        username:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: UserName
+        clientname:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: ClientName
+        zone:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Zone
+        accessid:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: AccessId
+        thread:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Thread
+        timestamp:
+            type: datetime
+            nullable: false
+            column: TimeStamp
+        eventtype:
+            type: string
+            nullable: false
+            length: 32
+            options:
+                fixed: false
+            column: EventType
+        message:
+            type: string
+            nullable: false
+            length: 0
+            options:
+                fixed: false
+            column: Message
+        category:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: Category
+        priority:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: Priority
+        eventid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: EventId
+        title:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: Title
+        machinename:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: MachineName
+        appdomain:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: AppDomain
+        processid:
+            type: string
+            nullable: true
+            length: 32
+            options:
+                fixed: false
+            column: ProcessId
+        processname:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: ProcessName
+        windowsidentity:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: WindowsIdentity
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

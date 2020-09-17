@@ -1,0 +1,181 @@
+PenD\Docker\Application\Model\Historycounts:
+    type: entity
+    table: HistoryCounts
+    id:
+        historycountPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: HistoryCount_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        countPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Count_pk
+        counttype:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: CountType
+        itemcode:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ItemCode
+        itemdescription:
+            type: string
+            nullable: true
+            length: 60
+            options:
+                fixed: false
+            column: ItemDescription
+        isserialitem:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsSerialItem
+        isbatchitem:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsBatchItem
+        itemidregistration:
+            type: string
+            nullable: false
+            length: 15
+            options:
+                fixed: false
+                default: Complete
+            column: ItemIdRegistration
+        warehousecode:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+                default: ''
+            column: WarehouseCode
+        warehouselocationcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: WarehouseLocationCode
+        itemdefaultcostprice:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 3
+            options:
+                default: '0'
+            column: ItemDefaultCostPrice
+        itemallowsfraction:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: ItemAllowsFraction
+        itemunitcode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: ItemUnitCode
+        itemid:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: true
+            column: ItemId
+        stock:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 2
+            column: Stock
+        absolutevalue:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 2
+            column: AbsoluteValue
+        ismanuallymodified:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsManuallyModified
+        erpdescription:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: _ErpDescription
+        erpdate:
+            type: datetime
+            nullable: true
+            column: _ErpDate
+        erpcountid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: _ErpCountId
+        erpnewstock:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 2
+            column: _ErpNewStock
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

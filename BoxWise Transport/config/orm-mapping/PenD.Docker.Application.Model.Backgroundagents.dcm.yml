@@ -1,0 +1,94 @@
+PenD\Docker\Application\Model\Backgroundagents:
+    type: entity
+    table: BackgroundAgents
+    uniqueConstraints:
+        BackgroundAgents:
+            columns:
+                - Id
+    id:
+        backgroundagentsPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: BackgroundAgents_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        id:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Id
+        name:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Name
+        type:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Type
+        os:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: OS
+        isauthorized:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsAuthorized
+        lastseen:
+            type: datetime
+            nullable: false
+            options:
+                default: getutcdate()
+            column: LastSeen
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

@@ -1,0 +1,90 @@
+PenD\Docker\Application\Model\Printjobauditlog:
+    type: entity
+    table: PrintJobAuditLog
+    indexes:
+        IDX_ED3AE6C751642F6C:
+            columns:
+                - PrintJobId
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        oldstatus:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: OldStatus
+        newstatus:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: NewStatus
+        description:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: Description
+        statuschangedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: StatusChangedOn
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        printjobid:
+            targetEntity: PenD\Docker\Application\Model\Printjobs
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                PrintJobId:
+                    referencedColumnName: Id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+<?php
+
+if (PHP_SAPI !== 'cli') {
+    echo 'Warning: C2 should be invoked via the CLI version of PHP, not the '.PHP_SAPI.' SAPI'.PHP_EOL;
+}
+
+error_reporting(E_ALL);
+
+require_once __DIR__."/../vendor/autoload.php";
+
+putenv('APPLICATION_ROOT='.__DIR__.'/..');
+
+use PenD\Docker\Console\Application;
+use PenD\PHP\Configuration;
+use PenD\PHP\MemoryLimit;
+
+$memoryLimit = new MemoryLimit('1535M');
+$dateTimeZone = new Configuration('date.timezone');
+$dateTimeZone->set('Europe/Amsterdam');
+
+$application = new Application();
+$application->setCatchExceptions(true);
+
+$exitCode = $application->run();
+
+$dateTimeZone->restore();
+$memoryLimit->restore();
+
+return $exitCode;

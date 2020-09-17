@@ -1,0 +1,27 @@
+##########################################
+### adding Gitify default ignore rules ###
+##########################################
+# ignoring IDE's
+# JetBrains
+.idea
+
+# windows thumbnail cache
+Thumbs.db
+
+# ignoring Mac OSX files
+*.DS_Store
+
+# ignore composer vendor directory
+vendor
+
+# ignore ant build resutls
+build
+
+# ignore tmp
+tmp
+
+# ignore the merge files
+*.orig
+*.BASE
+*.LOCAL
+*.REMOTE

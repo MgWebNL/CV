@@ -1,0 +1,117 @@
+# config/services.yaml
+parameters:
+    root: '/mnt/filer/www/nl.pend-group.transport/'
+#    root: '/mnt/development/www/dev.pend-group.mg.boxwise/'
+
+    database.host: 'h2799000.stratoserver.net\SQLEXPRESS'
+#    database.host: 'h2772775.stratoserver.net\SQLEXPRESS'
+    database.port: 1433
+    database.dbname: 'BOXwisePro'
+#    database.dbname: 'dev.pend-group.planning'
+    database.user: 'mg_sdk'
+    database.password: ''
+
+    doctrine.connection:
+        'driver': 'pdo_sqlsrv'
+        'charset': 'utf8'
+        'host': '%database.host%'
+        'port': '%database.port%'
+        'dbname': '%database.dbname%'
+        'user': '%database.user%'
+        'password': '%database.password%'
+
+    doctrine.paths:
+        - '%root%config/orm-mapping'
+    doctrine.proxies: '%root%tmp/doctrine/generated/proxies'
+    doctrine.devMode: true
+
+    # PROFIT LIVE
+    profit.api.key: ''
+    profit.api.baseUri: 'https://86939.rest.afas.online/ProfitRestServices/'
+    profit.config.classDir: '/mnt/filer/www/nl.pend-group.transport/tmp/generated-classes'
+
+    # PROFIT TEST
+#    profit.api.key: ''
+#    profit.api.baseUri: 'https://86939.resttest.afas.online/ProfitRestServices/'
+#    profit.config.classDir: '/mnt/development/www/dev.pend-group.mg.boxwise/tmp/generated-classes'
+
+    gls.api.username: 'apitest3@gls-netherlands.com'
+    gls.api.password: ''
+    gls.api.key: '06f67dd2b9d04e7c9fd5e0262163c693'
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        public: false       # Allows optimizing the container by removing unused services; this also means
+                            # fetching services directly from the container via $container->get() won't work.
+                            # The best practice is to be explicit about your dependencies anyway.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+#    App\:
+#      resource: '../src/*'
+#      exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+
+
+    # makes classes in src/Billing/Console/Command/ available to be used as a command
+    # this creates a service per class whose id is the fully-qualified class name
+    PenD\Docker\Console\Command\:
+        resource: '../src/Docker/Console/Command/*'
+        tags:
+            - { name: console.command }
+
+    # ...
+
+    # auto wiring examples can be found here : https://symfony.com/doc/current/service_container/autowiring.html
+
+    Doctrine\Common\Cache\ArrayCache: ~
+    PenD\Docker\Application\Profit\Configuration: ~
+    PenD\Docker\Application\Profit\ProfitManager: ~
+
+    Doctrine\Common\Cache\Cache: '@Doctrine\Common\Cache\ArrayCache'
+    PenD\Profit\ConfigurationInterface:
+        class: PenD\Docker\Application\Profit\Configuration
+        arguments:
+            $classDir: '%profit.config.classDir%'
+    PenD\Profit\ConnectionInterface:
+        class: PenD\Profit\Connection
+        calls:
+            - method: setApiKey
+              arguments:
+                  $apiKey: '%profit.api.key%'
+            - method: setBaseUri
+              arguments:
+                  $baseUri: '%profit.api.baseUri%'
+
+    PenD\GlsSdk\ConfigurationInterface:
+      class: PenD\GlsSdk\Configuration
+      calls:
+          - method: setUsername
+            arguments:
+                $username: '%gls.api.username%'
+          - method: setPassword
+            arguments:
+                $password: '%gls.api.password%'
+          - method: setApiKey
+            arguments:
+                $apiKeyIdentifier: 'Ocp-Apim-Subscription-Key'
+                $key: '%gls.api.key%'
+          - method: setHost
+            arguments:
+                $host: 'https://api.gls.nl/Test/V1' # test
+                # $host: 'https://api.gls.nl/V1' # live
+
+    PenD\Profit\ProfitManagerInterface: '@PenD\Docker\Application\Profit\ProfitManager'
+
+    # https://symfony.com/doc/current/service_container/factories.html
+    Doctrine\ORM\Configuration:
+        factory: ['Doctrine\ORM\Tools\Setup', 'createYAMLMetadataConfiguration']
+        arguments: ['%doctrine.paths%', '%doctrine.devMode%', '%doctrine.proxies%', '@Doctrine\Common\Cache\Cache']
+
+    Doctrine\ORM\EntityManager:
+        factory: ['Doctrine\ORM\EntityManager', 'create']
+        arguments: ['%doctrine.connection%', '@Doctrine\ORM\Configuration']
+
+    Doctrine\ORM\EntityManagerInterface: '@Doctrine\ORM\EntityManager'

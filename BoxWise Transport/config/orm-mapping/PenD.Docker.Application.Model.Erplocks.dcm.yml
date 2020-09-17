@@ -1,0 +1,83 @@
+PenD\Docker\Application\Model\Erplocks:
+    type: entity
+    table: ErpLocks
+    uniqueConstraints:
+        IX_ErpLocks:
+            columns:
+                - EntityKey
+                - EntityType
+    id:
+        erplockPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ErpLock_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        entitytype:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: EntityType
+        entitykey:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: EntityKey
+        currentstate:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+            column: CurrentState
+        migratetostate:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+            column: MigrateToState
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

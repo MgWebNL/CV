@@ -1,0 +1,61 @@
+{
+    "name": "pend/hart-long-machine",
+    "description": "This project contains the hlm as middleware between afas profit and the existing application (portal/panel/transport/planning)",
+    "keywords": [
+        "hart",
+        "long",
+        "machine",
+        "middleware",
+        "afas",
+        "profit"
+    ],
+    "type": "project",
+    "require": {
+        "php": "~7.3",
+        "ext-pdo": "*",
+        "symfony/console": "^4.0",
+        "symfony/config": "^4.0",
+        "symfony/dependency-injection": "^4.0",
+        "symfony/process": "^4.0",
+        "symfony/finder": "^4.0",
+        "symfony/yaml": "^4.0",
+        "guzzlehttp/guzzle": "^6.5",
+        "pend/profit": "^2.0",
+        "doctrine/orm": "^2.6",
+        "mmerian/doctrine-timestamp": "^1.0",
+        "marktopper/doctrine-dbal-timestamp-type": "^1.0",
+        "jacobdekeizer/statusweb-client": "^2.0",
+        "robgridley/zebra": "^2.0",
+        "smalot/cups-ipp": "^0.5.0",
+        "pend/gls-sdk": "^2.0",
+        "nicolab/php-ftp-client": "^1.5",
+        "clegginabox/pdf-merger": "dev-master"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^4.0"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mike Gerritsen",
+            "email": "mike@pend-group.com"
+        },
+        {
+            "name": "Mike Gerritsen",
+            "email": "mike@pend-group.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "PenD\\": "src"
+        }
+    },
+    "repositories": {
+        "private-packagist": {
+            "type": "composer",
+            "url": "https://repo.packagist.com/pd-group/"
+        },
+        "packagist.org": false
+    }
+}

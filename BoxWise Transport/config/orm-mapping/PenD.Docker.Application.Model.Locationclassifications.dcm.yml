@@ -1,0 +1,140 @@
+PenD\Docker\Application\Model\Locationclassifications:
+    type: entity
+    table: LocationClassifications
+    indexes:
+        IDX_8CD9AD106B151524:
+            columns:
+                - WarehouseLayoutSettings_fk
+    id:
+        locationclassificationPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: LocationClassification_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        storageassignmentclassificationFk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: StorageAssignmentClassification_fk
+        blockfrom:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: BlockFrom
+        blockto:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: BlockTo
+        aislefrom:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: AisleFrom
+        aisleto:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: AisleTo
+        columnfrom:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ColumnFrom
+        columnto:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ColumnTo
+        shelvefrom:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ShelveFrom
+        shelveto:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ShelveTo
+        usescript:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: UseScript
+        script:
+            type: string
+            nullable: true
+            length: 0
+            options:
+                fixed: false
+            column: Script
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        warehouselayoutsettingsFk:
+            targetEntity: PenD\Docker\Application\Model\Warehouselayoutsettings
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                WarehouseLayoutSettings_fk:
+                    referencedColumnName: WarehouseLayoutSettings_pk
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

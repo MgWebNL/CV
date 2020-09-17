@@ -1,0 +1,93 @@
+PenD\Docker\Application\Model\Countgroups:
+    type: entity
+    table: CountGroups
+    id:
+        countgroupsPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: CountGroups_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        storageassignmentclassificationsFk:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: StorageAssignmentClassifications_fk
+        system:
+            type: boolean
+            nullable: false
+            column: System
+        name:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: Name
+        code:
+            type: string
+            nullable: true
+            length: 0
+            options:
+                fixed: false
+            column: Code
+        active:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+            column: Active
+        usescript:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: UseScript
+        script:
+            type: string
+            nullable: true
+            length: 0
+            options:
+                fixed: false
+            column: Script
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

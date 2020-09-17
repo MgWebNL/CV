@@ -1,0 +1,79 @@
+PenD\Docker\Application\Model\Printjobattributes:
+    type: entity
+    table: PrintJobAttributes
+    indexes:
+        IDX_B3E981CB51642F6C:
+            columns:
+                - PrintJobId
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        key:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Key
+        value:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: Value
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        printjobid:
+            targetEntity: PenD\Docker\Application\Model\Printjobs
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                PrintJobId:
+                    referencedColumnName: Id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

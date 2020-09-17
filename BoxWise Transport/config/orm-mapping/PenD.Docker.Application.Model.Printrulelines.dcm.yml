@@ -1,0 +1,86 @@
+PenD\Docker\Application\Model\Printrulelines:
+    type: entity
+    table: PrintRuleLines
+    indexes:
+        IDX_803AAF23E8FF9E1D:
+            columns:
+                - PrintRuleId
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        attributename:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: AttributeName
+        operator:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: Operator
+        value:
+            type: text
+            nullable: true
+            length: -1
+            options:
+                fixed: false
+            column: Value
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        printruleid:
+            targetEntity: PenD\Docker\Application\Model\Printrules
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                PrintRuleId:
+                    referencedColumnName: Id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

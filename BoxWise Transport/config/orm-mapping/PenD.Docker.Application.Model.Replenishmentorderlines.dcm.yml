@@ -1,0 +1,253 @@
+PenD\Docker\Application\Model\Replenishmentorderlines:
+    type: entity
+    table: ReplenishmentOrderLines
+    indexes:
+        IDX_112383458A2DBF54:
+            columns:
+                - ReplenishmentOrders_fk
+    id:
+        replenishmentorderlinePk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ReplenishmentOrderLine_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        linenumber:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '-1'
+            column: LineNumber
+        itemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemCode
+        warehouse:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: Warehouse
+        customeritemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CustomerItemCode
+        customername:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CustomerName
+        defaultvendoritemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: DefaultVendorItemCode
+        defaultvendorbarcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: DefaultVendorBarcode
+        quantityordered:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityOrdered
+        quantitydelivered:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityDelivered
+        quantitytodeliver:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityToDeliver
+        linedateofdelivery:
+            type: datetime
+            nullable: true
+            column: LineDateOfDelivery
+        lineinstruction:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: LineInstruction
+        linedescription:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: LineDescription
+        isbatchnumberitem:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsBatchNumberItem
+        isserialnumberitem:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsSerialNumberItem
+        lineitemidentifier:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: LineItemIdentifier
+        itemweight:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: ItemWeight
+        itemlongdescription:
+            type: string
+            nullable: true
+            length: 2000
+            options:
+                fixed: false
+            column: ItemLongDescription
+        itemdescription:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ItemDescription
+        itembrand:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemBrand
+        linecurrencycode:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: false
+            column: LineCurrencyCode
+        itemsalesprice:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: ItemSalesPrice
+        itempurchaseprice:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: ItemPurchasePrice
+        itemsalespricewithvat:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: ItemSalesPriceWithVat
+        isfractionallowed:
+            type: boolean
+            nullable: true
+            column: IsFractionAllowed
+        itemidregistration:
+            type: string
+            nullable: true
+            length: 15
+            options:
+                fixed: false
+            column: ItemIdRegistration
+        unitcode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: UnitCode
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        replenishmentordersFk:
+            targetEntity: PenD\Docker\Application\Model\Replenishmentorders
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ReplenishmentOrders_fk:
+                    referencedColumnName: ReplenishmentOrders_pk
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

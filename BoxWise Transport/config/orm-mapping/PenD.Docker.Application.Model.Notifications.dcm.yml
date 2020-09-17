@@ -1,0 +1,133 @@
+PenD\Docker\Application\Model\Notifications:
+    type: entity
+    table: Notifications
+    indexes:
+        IX_Notifications_Reference:
+            columns:
+                - Reference
+        IDX_D37EFB26A814A8A9:
+            columns:
+                - NotificationGroupKey
+        IDX_D37EFB26F28B06D1:
+            columns:
+                - ZonePk
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        reference:
+            type: string
+            nullable: true
+            length: 40
+            options:
+                fixed: false
+            column: Reference
+        severity:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: Severity
+        gotolink:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: GotoLink
+        translationkey:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: TranslationKey
+        translationdata:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: TranslationData
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        notificationgroupkey:
+            targetEntity: PenD\Docker\Application\Model\Notificationgroups
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                NotificationGroupKey:
+                    referencedColumnName: Key
+            orphanRemoval: false
+        zonepk:
+            targetEntity: PenD\Docker\Application\Model\Zones
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ZonePk:
+                    referencedColumnName: ZonePk
+            orphanRemoval: false
+    manyToMany:
+        userPk:
+            targetEntity: PenD\Docker\Application\Model\Users
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: notificationid
+            joinTable:
+                name: notificationsseenbyuser
+                joinColumns:
+                    -
+                        name: NotificationId
+                        referencedColumnName: Id
+                inverseJoinColumns:
+                    -
+                        name: User_pk
+                        referencedColumnName: User_pk
+            orderBy: null
+    lifecycleCallbacks: {  }

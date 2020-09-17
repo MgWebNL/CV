@@ -1,0 +1,93 @@
+PenD\Docker\Application\Model\Prereceipttransactions:
+    type: entity
+    table: PreReceiptTransactions
+    id:
+        prereceipttransactionPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: PreReceiptTransaction_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        prereceiptlineFk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: PreReceiptLine_fk
+        transactionid:
+            type: guid
+            nullable: false
+            length: null
+            options:
+                fixed: false
+            column: TransactionId
+        number:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Number
+        type:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: Type
+        quantity:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            column: Quantity
+        enddate:
+            type: datetime
+            nullable: true
+            column: EndDate
+        ishandled:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsHandled
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

@@ -1,0 +1,106 @@
+PenD\Docker\Application\Model\Directorderlines:
+    type: entity
+    table: DirectOrderLines
+    indexes:
+        IDX_1991A0B078490879:
+            columns:
+                - DirectOrder_fk
+    id:
+        directorderlinesPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: DirectOrderLines_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        warehouselocationcode:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: WarehouseLocationCode
+        linenumber:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Linenumber
+        itemcode:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ItemCode
+        itemdescription:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ItemDescription
+        quantity:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            column: Quantity
+        isbatchnumberitem:
+            type: boolean
+            nullable: false
+            column: IsBatchNumberItem
+        isserialnumberitem:
+            type: boolean
+            nullable: false
+            column: IsSerialNumberItem
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        directorderFk:
+            targetEntity: PenD\Docker\Application\Model\Directorders
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                DirectOrder_fk:
+                    referencedColumnName: DirectOrders_pk
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

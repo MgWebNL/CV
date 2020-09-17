@@ -1,0 +1,80 @@
+PenD\Docker\Application\Model\Scriptsnippets:
+    type: entity
+    table: ScriptSnippets
+    indexes:
+        IDX_F073C965D11EEF3D:
+            columns:
+                - User_FK
+    id:
+        scriptsnippetPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ScriptSnippet_PK
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Name
+        description:
+            type: text
+            nullable: true
+            length: -1
+            options:
+                fixed: false
+            column: Description
+        script:
+            type: text
+            nullable: false
+            length: -1
+            options:
+                fixed: false
+            column: Script
+        createdon:
+            type: datetime
+            nullable: false
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        userFk:
+            targetEntity: PenD\Docker\Application\Model\Users
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                User_FK:
+                    referencedColumnName: User_pk
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

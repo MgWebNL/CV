@@ -1,0 +1,112 @@
+PenD\Docker\Application\Model\Itemmovements:
+    type: entity
+    table: ItemMovements
+    id:
+        itemmovementsPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ItemMovements_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        itemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemCode
+        itemdescription:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+            column: ItemDescription
+        quantityin:
+            type: decimal
+            nullable: true
+            precision: 19
+            scale: 4
+            column: QuantityIn
+        quantityout:
+            type: decimal
+            nullable: true
+            precision: 19
+            scale: 4
+            column: QuantityOut
+        task:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: Task
+        fktable:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+                default: ''
+            column: FkTable
+        foreignkey:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '-1'
+            column: ForeignKey
+        warehousecode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: WarehouseCode
+        locationcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: LocationCode
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

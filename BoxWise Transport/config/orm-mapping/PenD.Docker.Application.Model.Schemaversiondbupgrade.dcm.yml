@@ -1,0 +1,26 @@
+PenD\Docker\Application\Model\Schemaversiondbupgrade:
+    type: entity
+    table: SchemaVersionDbUpgrade
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        version:
+            type: string
+            nullable: true
+            length: 8000
+            options:
+                fixed: false
+            column: Version
+        bumpdate:
+            type: datetime
+            nullable: false
+            column: BumpDate
+    lifecycleCallbacks: {  }

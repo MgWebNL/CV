@@ -1,0 +1,324 @@
+PenD\Docker\Application\Model\Shipments:
+    type: entity
+    repositoryClass: PenD\Docker\Application\Repository\ShipmentsRepository
+    table: Shipments
+    id:
+        shipmentPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Shipment_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        shipperid:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: ShipperId
+        shipperserviceid:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: ShipperServiceId
+        shipperservicename:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: ShipperServiceName
+        name:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: Name
+        name2:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: Name2
+        address:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: Address
+        address2:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: Address2
+        address3:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: Address3
+        zipcode:
+            type: string
+            nullable: true
+            length: 25
+            options:
+                fixed: false
+            column: ZipCode
+        city:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: City
+        statecode:
+            type: string
+            nullable: true
+            length: 5
+            options:
+                fixed: false
+            column: StateCode
+        countrycode:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: false
+            column: CountryCode
+        countryname:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: CountryName
+        notes:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+            column: Notes
+        phonenumber:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: PhoneNumber
+        email:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: Email
+        reference:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: Reference
+        sendername:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: SenderName
+        sendername2:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: SenderName2
+        senderaddress:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: SenderAddress
+        senderaddress2:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: SenderAddress2
+        senderaddress3:
+            type: string
+            nullable: true
+            length: 500
+            options:
+                fixed: false
+            column: SenderAddress3
+        senderzipcode:
+            type: string
+            nullable: true
+            length: 25
+            options:
+                fixed: false
+            column: SenderZipCode
+        sendercity:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: SenderCity
+        senderstatecode:
+            type: string
+            nullable: true
+            length: 5
+            options:
+                fixed: false
+            column: SenderStateCode
+        sendercountrycode:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: false
+            column: SenderCountryCode
+        sendercountryname:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: SenderCountryName
+        senderphonenumber:
+            type: string
+            nullable: true
+            length: 30
+            options:
+                fixed: false
+            column: SenderPhoneNumber
+        senderemail:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: SenderEmail
+        eorinumber:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: EoriNumber
+        customdata:
+            type: blob
+            nullable: true
+            length: null
+            options:
+                fixed: false
+            column: CustomData
+        deliverynotepdf:
+            type: blob
+            nullable: true
+            length: null
+            options:
+                fixed: false
+            column: DeliveryNotePdf
+        communicationartefacts:
+            type: text
+            nullable: true
+            length: 16
+            options:
+                fixed: false
+            column: CommunicationArtefacts
+        iscod:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsCod
+        totalcharge:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: TotalCharge
+        totalsalescharge:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: TotalSalesCharge
+        canceled:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: Canceled
+        pickupdatetime:
+            type: datetime
+            nullable: true
+            column: PickupDateTime
+        deliverybegindatetime:
+            type: datetime
+            nullable: true
+            column: DeliveryBeginDateTime
+        deliveryenddatetime:
+            type: datetime
+            nullable: true
+            column: DeliveryEndDateTime
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    oneToMany:
+        shipmentpackages:
+            targetEntity: PenD\Docker\Application\Model\Shipmentpackages
+            mappedBy: shipmentFk
+    lifecycleCallbacks: {  }

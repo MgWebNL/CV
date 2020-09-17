@@ -1,0 +1,246 @@
+PenD\Docker\Application\Model\Replenishmentorders:
+    type: entity
+    table: ReplenishmentOrders
+    id:
+        replenishmentordersPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ReplenishmentOrders_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        dateordered:
+            type: datetime
+            nullable: true
+            column: DateOrdered
+        dateofdelivery:
+            type: datetime
+            nullable: true
+            column: DateOfDelivery
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+            column: Description
+        projectcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ProjectCode
+        projectname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ProjectName
+        businessunit:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: BusinessUnit
+        customerreference:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: CustomerReference
+        customernumber:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: CustomerNumber
+        customername:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CustomerName
+        customeraddressline1:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerAddressLine1
+        customeraddressline2:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerAddressLine2
+        customeraddressline3:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerAddressLine3
+        customerzipcode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: CustomerZipCode
+        customercity:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerCity
+        customerstate:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerState
+        customercountrycode:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: false
+            column: CustomerCountryCode
+        customercountryname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerCountryName
+        customercontact:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: CustomerContact
+        customercontactemail:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: CustomerContactEmail
+        customerphonenumber:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: CustomerPhoneNumber
+        deliverymethod:
+            type: string
+            nullable: true
+            length: 40
+            options:
+                fixed: false
+            column: DeliveryMethod
+        warehouse:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: Warehouse
+        warehouseto:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: WarehouseTo
+        locationto:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: LocationTo
+        selectioncode:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+            column: SelectionCode
+        selectioncodedescription:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: SelectionCodeDescription
+        routingcode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: RoutingCode
+        approved:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: Approved
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+        number:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+            column: Number
+    lifecycleCallbacks: {  }

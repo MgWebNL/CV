@@ -1,0 +1,57 @@
+PenD\Docker\Application\Model\Servercache:
+    type: entity
+    table: ServerCache
+    id:
+        servercachePk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ServerCache_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        cache:
+            type: blob
+            nullable: false
+            length: null
+            options:
+                fixed: false
+            column: Cache
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

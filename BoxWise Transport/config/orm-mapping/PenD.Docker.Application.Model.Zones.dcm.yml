@@ -1,0 +1,101 @@
+PenD\Docker\Application\Model\Zones:
+    type: entity
+    table: Zones
+    id:
+        zonepk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ZonePk
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Name
+        description:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+            column: Description
+        active:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: Active
+        rights:
+            type: text
+            nullable: true
+            length: -1
+            options:
+                fixed: false
+            column: Rights
+        sys:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: Sys
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToMany:
+        userfk:
+            targetEntity: PenD\Docker\Application\Model\Users
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: zonefk
+            joinTable:
+                name: zones_users
+                joinColumns:
+                    -
+                        name: ZoneFk
+                        referencedColumnName: ZonePk
+                inverseJoinColumns:
+                    -
+                        name: UserFk
+                        referencedColumnName: User_pk
+            orderBy: null
+    lifecycleCallbacks: {  }

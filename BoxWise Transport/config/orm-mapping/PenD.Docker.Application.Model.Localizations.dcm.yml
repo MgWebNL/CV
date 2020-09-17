@@ -1,0 +1,92 @@
+PenD\Docker\Application\Model\Localizations:
+    type: entity
+    table: Localizations
+    id:
+        pk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        resourceid:
+            type: string
+            nullable: true
+            length: 4000
+            options:
+                fixed: false
+            column: ResourceId
+        value:
+            type: string
+            nullable: true
+            length: 0
+            options:
+                fixed: false
+                default: ''
+            column: Value
+        localeid:
+            type: string
+            nullable: true
+            length: 160
+            options:
+                fixed: false
+                default: ''
+            column: LocaleId
+        resourceset:
+            type: string
+            nullable: true
+            length: 4000
+            options:
+                fixed: false
+                default: ''
+            column: ResourceSet
+        type:
+            type: string
+            nullable: true
+            length: 4000
+            options:
+                fixed: false
+                default: ''
+            column: Type
+        binfile:
+            type: binary
+            nullable: true
+            column: BinFile
+        textfile:
+            type: string
+            nullable: true
+            length: 4000
+            options:
+                fixed: false
+            column: TextFile
+        filename:
+            type: string
+            nullable: true
+            length: 2048
+            options:
+                fixed: false
+                default: ''
+            column: Filename
+        comment:
+            type: string
+            nullable: true
+            length: 4000
+            options:
+                fixed: false
+            column: Comment
+        valuetype:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: ValueType
+        updated:
+            type: datetime
+            nullable: true
+            options:
+                default: getutcdate()
+            column: Updated
+    lifecycleCallbacks: {  }

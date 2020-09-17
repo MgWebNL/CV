@@ -1,0 +1,111 @@
+PenD\Docker\Application\Model\Barcodestructuredefinitions:
+    type: entity
+    table: BarcodeStructureDefinitions
+    id:
+        barcodestructuredefinitionsPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: BarcodeStructureDefinitions_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        description:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: Description
+        regularexpression:
+            type: string
+            nullable: false
+            length: 512
+            options:
+                fixed: false
+            column: RegularExpression
+        parseinstructions:
+            type: string
+            nullable: false
+            length: 512
+            options:
+                fixed: false
+            column: ParseInstructions
+        replaceinstructions:
+            type: string
+            nullable: false
+            length: 512
+            options:
+                fixed: false
+                default: ''
+            column: ReplaceInstructions
+        priority:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '99'
+            column: Priority
+        active:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+            column: Active
+        usescript:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: UseScript
+        script:
+            type: string
+            nullable: true
+            length: 0
+            options:
+                fixed: false
+            column: Script
+        system:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: System
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

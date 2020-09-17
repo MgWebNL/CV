@@ -1,0 +1,115 @@
+PenD\Docker\Application\Model\Settings:
+    type: entity
+    table: Settings
+    uniqueConstraints:
+        IX_Settings:
+            columns:
+                - Setting
+                - UserName
+                - MachineName
+    id:
+        settingPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Setting_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        setting:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: Setting
+        username:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: UserName
+        machinename:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: MachineName
+        type:
+            type: string
+            nullable: false
+            length: 500
+            options:
+                fixed: false
+            column: Type
+        valueasobject:
+            type: blob
+            nullable: true
+            length: null
+            options:
+                fixed: false
+            column: ValueAsObject
+        valueasstring:
+            type: text
+            nullable: false
+            length: -1
+            options:
+                fixed: false
+                default: ''
+            column: ValueAsString
+        valueasint32:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: ValueAsInt32
+        valueasboolean:
+            type: boolean
+            nullable: true
+            column: ValueAsBoolean
+        inherited:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: Inherited
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

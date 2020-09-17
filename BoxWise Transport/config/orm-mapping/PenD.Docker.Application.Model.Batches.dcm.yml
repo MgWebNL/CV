@@ -1,0 +1,111 @@
+PenD\Docker\Application\Model\Batches:
+    type: entity
+    table: Batches
+    id:
+        batchesPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Batches_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Name
+        description:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+            column: Description
+        notes:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+            column: Notes
+        active:
+            type: boolean
+            nullable: false
+            column: Active
+        zoneFk:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: Zone_fk
+        userFk:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: User_fk
+        assigneduserFk:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: AssignedUser_fk
+        pickstartedon:
+            type: datetime
+            nullable: true
+            column: PickStartedOn
+        pickfinishedon:
+            type: datetime
+            nullable: true
+            column: PickFinishedOn
+        packstartedon:
+            type: datetime
+            nullable: true
+            column: PackStartedOn
+        packfinishedon:
+            type: datetime
+            nullable: true
+            column: PackFinishedOn
+        batchcreatedon:
+            type: datetime
+            nullable: true
+            column: BatchCreatedOn
+        batchfinishedon:
+            type: datetime
+            nullable: true
+            column: BatchFinishedOn
+        createdon:
+            type: datetime
+            nullable: false
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

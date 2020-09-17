@@ -1,0 +1,96 @@
+PenD\Docker\Application\Model\Directorders:
+    type: entity
+    table: DirectOrders
+    id:
+        directordersPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: DirectOrders_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        id:
+            type: guid
+            nullable: false
+            length: null
+            options:
+                fixed: false
+            column: Id
+        orderdate:
+            type: datetime
+            nullable: false
+            column: OrderDate
+        reference:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: Reference
+        customernumber:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: CustomerNumber
+        customername:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CustomerName
+        warehousecode:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: WarehouseCode
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+        erpid:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: ErpId
+    lifecycleCallbacks: {  }

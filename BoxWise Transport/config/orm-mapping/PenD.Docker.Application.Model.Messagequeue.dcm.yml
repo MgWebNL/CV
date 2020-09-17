@@ -1,0 +1,139 @@
+PenD\Docker\Application\Model\Messagequeue:
+    type: entity
+    table: MessageQueue
+    indexes:
+        IX_MessageQueue:
+            columns:
+                - Id
+        IX_MessageQueue_Status:
+            columns:
+                - Status
+        IX_MessageQueue_Type:
+            columns:
+                - Type
+    id:
+        id:
+            type: guid
+            nullable: false
+            length: null
+            options:
+                fixed: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        parentid:
+            type: guid
+            nullable: true
+            length: null
+            options:
+                fixed: false
+            column: ParentId
+        referenceid:
+            type: guid
+            nullable: true
+            length: null
+            options:
+                fixed: false
+            column: ReferenceId
+        hasstockallocations:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: HasStockAllocations
+        type:
+            type: string
+            nullable: false
+            length: 250
+            options:
+                fixed: false
+            column: Type
+        body:
+            type: binary
+            nullable: true
+            column: Body
+        bodymimetype:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: BodyMimeType
+        label:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: Label
+        source:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: Source
+        status:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Status
+        priority:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '3'
+            column: Priority
+        log:
+            type: string
+            nullable: true
+            length: 0
+            options:
+                fixed: false
+            column: Log
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+        bodysize:
+            type: bigint
+            nullable: true
+            options:
+                unsigned: false
+            column: BodySize
+    lifecycleCallbacks: {  }

@@ -1,0 +1,22 @@
+PenD\Docker\Application\Model\Schemaversion:
+    type: entity
+    table: SchemaVersion
+    id:
+        version:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            id: true
+            column: Version
+            generator:
+                strategy: IDENTITY
+    fields:
+        datetime:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: DateTime
+    lifecycleCallbacks: {  }

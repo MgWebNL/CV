@@ -1,0 +1,165 @@
+PenD\Docker\Application\Model\Printjobs:
+    type: entity
+    table: PrintJobs
+    id:
+        id:
+            type: guid
+            nullable: false
+            length: null
+            options:
+                fixed: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        externalid:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ExternalId
+        label:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: Label
+        status:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: Status
+        printerid:
+            type: string
+            nullable: false
+            length: 260
+            options:
+                fixed: false
+            column: PrinterId
+        printruleid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: PrintRuleId
+        jobtype:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: JobType
+        blobid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: BlobId
+        documenttype:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: DocumentType
+        copies:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '1'
+            column: Copies
+        colormode:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: ColorMode
+        duplexmode:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: DuplexMode
+        pageorientation:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: PageOrientation
+        bin:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Bin
+        pagesize:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: PageSize
+        zoneid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: ZoneId
+        userid:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: UserId
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+        printscaletype:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: PrintScaleType
+    lifecycleCallbacks: {  }

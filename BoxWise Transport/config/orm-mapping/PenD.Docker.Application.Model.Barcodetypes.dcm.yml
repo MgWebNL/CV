@@ -1,0 +1,94 @@
+PenD\Docker\Application\Model\Barcodetypes:
+    type: entity
+    table: BarcodeTypes
+    id:
+        barcodetypesPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: BarcodeTypes_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Name
+        value:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Value
+        defaultvalue:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: DefaultValue
+        datatype:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: int
+            column: DataType
+        description:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: Description
+        maingroup:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: General
+            column: MainGroup
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

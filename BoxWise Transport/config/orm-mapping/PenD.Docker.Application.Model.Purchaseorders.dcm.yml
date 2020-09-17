@@ -1,0 +1,444 @@
+PenD\Docker\Application\Model\Purchaseorders:
+    type: entity
+    table: PurchaseOrders
+    id:
+        purchaseordersPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: PurchaseOrders_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        groupguid:
+            type: guid
+            nullable: true
+            length: null
+            options:
+                fixed: false
+            column: GroupGuid
+        erpid:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: ErpId
+        purchaseorderid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '-1'
+            column: PurchaseOrderId
+        ordernumber:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: OrderNumber
+        yourreference:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: YourReference
+        dateordered:
+            type: datetime
+            nullable: true
+            column: DateOrdered
+        datefirstexpected:
+            type: datetime
+            nullable: true
+            column: DateFirstExpected
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+            column: Description
+        projectcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ProjectCode
+        projectname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ProjectName
+        businessunit:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: BusinessUnit
+        vendornumber:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: VendorNumber
+        vendorname:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: VendorName
+        vendoraddressline1:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: VendorAddressLine1
+        vendoraddressline2:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: VendorAddressLine2
+        vendoraddressline3:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: VendorAddressLine3
+        vendorzipcode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: VendorZipCode
+        vendorcity:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: VendorCity
+        vendorstate:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: VendorState
+        vendorcountrycode:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: false
+            column: VendorCountryCode
+        vendorcountryname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: VendorCountryName
+        vendorcontact:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: VendorContact
+        vendorcontactemail:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: VendorContactEmail
+        vendorphonenumber:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: VendorPhoneNumber
+        deliverymethod:
+            type: string
+            nullable: true
+            length: 40
+            options:
+                fixed: false
+            column: DeliveryMethod
+        warehouse:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: Warehouse
+        selectioncode:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+            column: SelectionCode
+        selectioncodedescription:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: SelectionCodeDescription
+        purchaseorderlineid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '-1'
+            column: PurchaseOrderLineId
+        linenumber:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '-1'
+            column: LineNumber
+        itemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemCode
+        unitcode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: UnitCode
+        salesunitcode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: SalesUnitCode
+        salesunitfactor:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '1'
+            column: SalesUnitFactor
+        defaultvendoritemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: DefaultVendorItemCode
+        defaultvendorbarcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: DefaultVendorBarcode
+        currentvendoritemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CurrentVendorItemCode
+        currentvendorbarcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CurrentVendorBarcode
+        quantityordered:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityOrdered
+        quantityreceived:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityReceived
+        quantitytoreceive:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityToReceive
+        dateexpected:
+            type: datetime
+            nullable: true
+            column: DateExpected
+        lineinstruction:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: LineInstruction
+        isbatchnumberitem:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsBatchNumberItem
+        isserialnumberitem:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsSerialNumberItem
+        itemweight:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: ItemWeight
+        linedescription:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: LineDescription
+        itemlongdescription:
+            type: string
+            nullable: true
+            length: 2000
+            options:
+                fixed: false
+            column: ItemLongDescription
+        itemdescription:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ItemDescription
+        itembrand:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemBrand
+        linecurrencycode:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: false
+            column: LineCurrencyCode
+        itempurchaseprice:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: ItemPurchasePrice
+        itemdefaultlocation:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemDefaultLocation
+        prereceiptid:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: PreReceiptId
+        prereceiptdescription:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: PreReceiptDescription
+        prereceipttransactionid:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: PreReceiptTransactionId
+        inboundlocation:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+            column: InboundLocation
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

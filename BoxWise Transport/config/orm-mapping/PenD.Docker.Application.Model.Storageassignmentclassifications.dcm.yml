@@ -1,0 +1,70 @@
+PenD\Docker\Application\Model\Storageassignmentclassifications:
+    type: entity
+    table: StorageAssignmentClassifications
+    id:
+        storageassignmentclassificationPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: StorageAssignmentClassification_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        code:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Code
+        name:
+            type: string
+            nullable: false
+            length: 100
+            options:
+                fixed: false
+            column: Name
+        sortorder:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: SortOrder
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

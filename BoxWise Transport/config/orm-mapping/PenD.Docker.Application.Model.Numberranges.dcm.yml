@@ -1,0 +1,113 @@
+PenD\Docker\Application\Model\Numberranges:
+    type: entity
+    table: NumberRanges
+    id:
+        numberrangePk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: NumberRange_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        description:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Description
+        from:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: From
+        to:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: To
+        current:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Current
+        type:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Type
+        prefix:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Prefix
+        suffix:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Suffix
+        length:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: Length
+        reseton:
+            type: datetime
+            nullable: true
+            column: ResetOn
+        resetby:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ResetBy
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

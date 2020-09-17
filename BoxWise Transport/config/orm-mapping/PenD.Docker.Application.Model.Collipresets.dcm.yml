@@ -1,0 +1,125 @@
+PenD\Docker\Application\Model\Collipresets:
+    type: entity
+    table: ColliPresets
+    id:
+        collipresetsPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ColliPresets_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        type:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Type
+        name:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Name
+        length:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 0
+            column: Length
+        width:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 0
+            column: Width
+        height:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 0
+            column: Height
+        weight:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 0
+            column: Weight
+        active:
+            type: boolean
+            nullable: false
+            column: Active
+        isdefault:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsDefault
+        collispecificationcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ColliSpecificationCode
+        itemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemCode
+        barcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Barcode
+        stockregistration:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: StockRegistration
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

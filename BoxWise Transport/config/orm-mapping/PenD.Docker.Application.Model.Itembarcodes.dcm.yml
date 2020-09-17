@@ -1,0 +1,171 @@
+PenD\Docker\Application\Model\Itembarcodes:
+    type: entity
+    table: ItemBarcodes
+    indexes:
+        IX_ItemBarcode_Barcode:
+            columns:
+                - Barcode
+        IX_ItemBarcode_ItemCode:
+            columns:
+                - ItemCode
+    uniqueConstraints:
+        IX_ItemBarcode_Key:
+            columns:
+                - Key
+    id:
+        itembarcodePk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ItemBarcode_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        fixationtype:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: FixationType
+        itemcode:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ItemCode
+        barcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Barcode
+        unitcode:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: UnitCode
+        unitname:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: UnitName
+        attributeid:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: AttributeId
+        attributename:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: AttributeName
+        factor:
+            type: decimal
+            nullable: false
+            precision: 18
+            scale: 5
+            column: Factor
+        itemtype:
+            type: smallint
+            nullable: false
+            options:
+                unsigned: false
+                comment: '0=Normal, 1=Serial, 2=Batch'
+            column: ItemType
+        key:
+            type: string
+            nullable: false
+            length: 150
+            options:
+                fixed: false
+            column: Key
+        hashcode:
+            type: bigint
+            nullable: false
+            options:
+                unsigned: false
+            column: Hashcode
+        status:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+            column: Status
+        synccount:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: SyncCount
+        lastsyncerror:
+            type: text
+            nullable: true
+            length: -1
+            options:
+                fixed: false
+            column: LastSyncError
+        formerbarcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: FormerBarcode
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+        customfields:
+            type: text
+            nullable: true
+            length: -1
+            options:
+                fixed: false
+            column: CustomFields
+    lifecycleCallbacks: {  }

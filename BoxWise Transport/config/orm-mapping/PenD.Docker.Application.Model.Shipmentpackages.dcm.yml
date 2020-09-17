@@ -1,0 +1,210 @@
+PenD\Docker\Application\Model\Shipmentpackages:
+    type: entity
+    table: ShipmentPackages
+    indexes:
+        IX_ShipmentPackages:
+            columns:
+                - Shipment_fk
+    id:
+        shipmentpackagePk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ShipmentPackage_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        yourreference:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: YourReference
+        ourreference:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: OurReference
+        customerreference:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: CustomerReference
+        outerreference:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: OuterReference
+        weight:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 2
+            column: Weight
+        dimensions:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: Dimensions
+        volume:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 2
+            column: Volume
+        boxnumber:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: BoxNumber
+        date:
+            type: datetime
+            nullable: true
+            column: Date
+        packagetype:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: PackageType
+        label:
+            type: blob
+            nullable: true
+            length: null
+            options:
+                fixed: false
+            column: Label
+        labelduplicate:
+            type: blob
+            nullable: true
+            length: null
+            options:
+                fixed: false
+            column: LabelDuplicate
+        cashamount:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: CashAmount
+        cashcurrency:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: false
+            column: CashCurrency
+        collicount:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: ColliCount
+        trackingurl:
+            type: string
+            nullable: true
+            length: 512
+            options:
+                fixed: false
+            column: TrackingUrl
+        collipresetname:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ColliPresetName
+        collispecificationcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ColliSpecificationCode
+        itemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemCode
+        boxid:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+                comment: 'A unique ID of a box, usually the same as the BoxNumber. In some cases this will contain a serialnumber to identify the package, this will be used by customers to keep track of their containers.'
+            column: BoxId
+        stockregistration:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: StockRegistration
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        shipmentFk:
+            targetEntity: PenD\Docker\Application\Model\Shipments
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                Shipment_fk:
+                    referencedColumnName: Shipment_pk
+            orphanRemoval: false
+    manyToMany:
+        outboundorders:
+            targetEntity: PenD\Docker\Application\Model\Outboundorders
+            mappedBy: shipmentpackages
+    lifecycleCallbacks: {  }

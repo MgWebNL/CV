@@ -1,0 +1,64 @@
+PenD\Docker\Application\Model\Warehouselayoutsettings:
+    type: entity
+    table: WarehouseLayoutSettings
+    id:
+        warehouselayoutsettingsPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: WarehouseLayoutSettings_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        warehousecode:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: WarehouseCode
+        regularexpression:
+            type: string
+            nullable: false
+            length: 250
+            options:
+                fixed: false
+            column: RegularExpression
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

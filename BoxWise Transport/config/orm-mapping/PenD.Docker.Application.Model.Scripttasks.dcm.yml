@@ -1,0 +1,171 @@
+PenD\Docker\Application\Model\Scripttasks:
+    type: entity
+    table: ScriptTasks
+    id:
+        scripttaskPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ScriptTask_PK
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: Name
+        description:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: Description
+        script:
+            type: string
+            nullable: false
+            length: 0
+            options:
+                fixed: false
+            column: Script
+        startdate:
+            type: datetime
+            nullable: false
+            column: StartDate
+        enddate:
+            type: datetime
+            nullable: true
+            column: EndDate
+        minutes:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+                default: '*'
+            column: Minutes
+        hours:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+                default: '*'
+            column: Hours
+        days:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+                default: '*'
+            column: Days
+        months:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+                default: '*'
+            column: Months
+        priority:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Priority
+        active:
+            type: boolean
+            nullable: true
+            options:
+                default: '0'
+            column: Active
+        executeonmonday:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: ExecuteOnMonday
+        executeontuesday:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: ExecuteOnTuesday
+        executeonwednesday:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: ExecuteOnWednesday
+        executeonthursday:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: ExecuteOnThursday
+        executeonfriday:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: ExecuteOnFriday
+        executeonsaturday:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: ExecuteOnSaturday
+        executeonsunday:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: ExecuteOnSunday
+        userid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: UserId
+        zoneid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ZoneId
+        createdon:
+            type: datetime
+            nullable: false
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

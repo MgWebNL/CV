@@ -1,0 +1,103 @@
+PenD\Docker\Application\Model\Zonescripts:
+    type: entity
+    table: ZoneScripts
+    uniqueConstraints:
+        IX_HookZone:
+            columns:
+                - Hook
+                - ZoneFk
+    id:
+        scriptPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Script_Pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Name
+        description:
+            type: string
+            nullable: true
+            length: 200
+            options:
+                fixed: false
+            column: Description
+        script:
+            type: string
+            nullable: false
+            length: 0
+            options:
+                fixed: false
+            column: Script
+        active:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+            column: Active
+        hook:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Hook
+        hookversion:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '1'
+            column: HookVersion
+        zonefk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '-1'
+            column: ZoneFk
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

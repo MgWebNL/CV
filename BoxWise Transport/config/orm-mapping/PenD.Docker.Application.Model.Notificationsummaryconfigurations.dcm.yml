@@ -1,0 +1,120 @@
+PenD\Docker\Application\Model\Notificationsummaryconfigurations:
+    type: entity
+    table: NotificationSummaryConfigurations
+    indexes:
+        IDX_52495148F28B06D1:
+            columns:
+                - ZonePk
+        IDX_52495148636C5E80:
+            columns:
+                - User_pk
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Id
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 250
+            options:
+                fixed: false
+            column: Name
+        executiontype:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ExecutionType
+        scheduletype:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ScheduleType
+        lasttimeexecuted:
+            type: datetime
+            nullable: false
+            column: LastTimeExecuted
+        nexttimetoexecute:
+            type: datetime
+            nullable: false
+            column: NextTimeToExecute
+        executionconfig:
+            type: text
+            nullable: true
+            length: 8
+            options:
+                fixed: false
+            column: ExecutionConfig
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+        isactive:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+            column: IsActive
+    manyToOne:
+        zonepk:
+            targetEntity: PenD\Docker\Application\Model\Zones
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ZonePk:
+                    referencedColumnName: ZonePk
+            orphanRemoval: false
+        userPk:
+            targetEntity: PenD\Docker\Application\Model\Users
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                User_pk:
+                    referencedColumnName: User_pk
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

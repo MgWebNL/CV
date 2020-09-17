@@ -1,0 +1,99 @@
+PenD\Docker\Application\Model\Itemids:
+    type: entity
+    table: ItemIds
+    uniqueConstraints:
+        IX_ItemIds:
+            columns:
+                - ItemMovement_fk
+                - Number
+                - Type
+    id:
+        itemidPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ItemId_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        itemmovementFk:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: ItemMovement_fk
+        number:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Number
+        type:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: Type
+        description:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: Description
+        quantity:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: Quantity
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+        begindate:
+            type: datetime
+            nullable: true
+            column: BeginDate
+        enddate:
+            type: datetime
+            nullable: true
+            column: EndDate
+    lifecycleCallbacks: {  }

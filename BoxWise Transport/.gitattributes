@@ -1,0 +1,29 @@
+###########################################
+### adding Gitify default gitattributes ###
+###########################################
+* 	text	eol=lf
+
+*.gcn       binary
+
+*.png 	    binary
+*.jpg	    binary
+*.ico       binary
+
+*.otf	    binary
+*.eot	    binary
+*.ttf	    binary
+*.woff      binary
+*.woff2     binary
+
+*.pdf	    binary
+*.doc	    binary
+*.docx	    binary
+*.wmv	    binary
+*.mp4       binary
+
+*           text=auto
+*.css       linguist-vendored
+*.scss      linguist-vendored
+*.js        linguist-vendored
+CHANGELOG.md export-ignore
+

@@ -1,0 +1,98 @@
+PenD\Docker\Application\Model\Shipmentpackageitems:
+    type: entity
+    table: ShipmentPackageItems
+    indexes:
+        IDX_B5F97203F966D503:
+            columns:
+                - OutboundOrder_fk
+        IDX_B5F9720386FFB66D:
+            columns:
+                - ShipmentPackage_fk
+    id:
+        shipmemtpackageitemsPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ShipmemtPackageItems_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        innerreference:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: InnerReference
+        itemidnumber:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemIdNumber
+        quantity:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            column: Quantity
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToOne:
+        outboundorderFk:
+            targetEntity: PenD\Docker\Application\Model\Outboundorders
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                OutboundOrder_fk:
+                    referencedColumnName: OutboundOrders_pk
+            orphanRemoval: false
+        shipmentpackageFk:
+            targetEntity: PenD\Docker\Application\Model\Shipmentpackages
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                ShipmentPackage_fk:
+                    referencedColumnName: ShipmentPackage_pk
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

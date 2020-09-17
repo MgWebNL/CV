@@ -1,0 +1,35 @@
+PenD\Docker\Application\Model\Genericsync:
+    type: entity
+    table: GenericSync
+    id:
+        key:
+            type: string
+            nullable: false
+            length: 150
+            options:
+                fixed: false
+            id: true
+            column: Key
+        type:
+            type: string
+            nullable: false
+            length: 150
+            options:
+                fixed: false
+            id: true
+            column: Type
+    fields:
+        jsondata:
+            type: string
+            nullable: false
+            length: 0
+            options:
+                fixed: false
+            column: JsonData
+        hash:
+            type: bigint
+            nullable: false
+            options:
+                unsigned: false
+            column: Hash
+    lifecycleCallbacks: {  }

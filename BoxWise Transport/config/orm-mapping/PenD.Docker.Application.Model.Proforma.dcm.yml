@@ -1,0 +1,61 @@
+PenD\Docker\Application\Model\Proforma:
+    type: entity
+    table: Proforma
+    id:
+        proformaPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Proforma_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        shipmentpackageitemsFk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ShipmentPackageItems_fk
+        number:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: Number
+        linenumber:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: LineNumber
+        date:
+            type: datetime
+            nullable: false
+            column: Date
+        freightcharges:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 4
+            column: FreightCharges
+        insurancecharges:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 4
+            column: InsuranceCharges
+        othercharges:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 4
+            column: OtherCharges
+        discounts:
+            type: decimal
+            nullable: true
+            precision: 18
+            scale: 4
+            column: Discounts
+    lifecycleCallbacks: {  }

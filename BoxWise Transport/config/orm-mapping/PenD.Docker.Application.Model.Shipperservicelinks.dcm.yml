@@ -1,0 +1,82 @@
+PenD\Docker\Application\Model\Shipperservicelinks:
+    type: entity
+    table: ShipperServiceLinks
+    id:
+        shipperservicelinkPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: ShipperServiceLink_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        erpdeliverymethodcode:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ErpDeliveryMethodCode
+        erpdeliverymethoddescription:
+            type: string
+            nullable: false
+            length: 200
+            options:
+                fixed: false
+            column: ErpDeliveryMethodDescription
+        shipperid:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ShipperId
+        servicelevel:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: ServiceLevel
+        allowdifferentchoice:
+            type: boolean
+            nullable: false
+            column: AllowDifferentChoice
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

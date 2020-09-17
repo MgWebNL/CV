@@ -1,0 +1,126 @@
+PenD\Docker\Application\Model\Users:
+    type: entity
+    table: Users
+    uniqueConstraints:
+        IX_Users:
+            columns:
+                - UserName
+    id:
+        userPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: User_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        fullname:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: FullName
+        username:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+            column: UserName
+        active:
+            type: boolean
+            nullable: false
+            options:
+                default: '1'
+            column: Active
+        preferredlanguage:
+            type: string
+            nullable: true
+            length: 8
+            options:
+                fixed: false
+            column: PreferredLanguage
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+        customfield:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CustomField
+        emailaddress:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: EmailAddress
+        hash:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Hash
+        salt:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: Salt
+    manyToMany:
+        notificationid:
+            targetEntity: PenD\Docker\Application\Model\Notifications
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: userPk
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+        zonefk:
+            targetEntity: PenD\Docker\Application\Model\Zones
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: userfk
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

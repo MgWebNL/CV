@@ -1,0 +1,96 @@
+PenD\Docker\Application\Model\Licenseplates:
+    type: entity
+    table: LicensePlates
+    id:
+        licenseplatePk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: LicensePlate_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        code:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: Code
+        description:
+            type: string
+            nullable: true
+            length: 512
+            options:
+                fixed: false
+            column: Description
+        warehousecode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: WarehouseCode
+        locationcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: LocationCode
+        status:
+            type: string
+            nullable: false
+            length: 25
+            options:
+                fixed: false
+            column: Status
+        bestbeforedate:
+            type: datetime
+            nullable: true
+            column: BestBeforeDate
+        reference:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: Reference
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

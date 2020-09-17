@@ -1,0 +1,70 @@
+PenD\Docker\Application\Model\Usercache:
+    type: entity
+    table: UserCache
+    id:
+        usercachePk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: UserCache_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        userFk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: User_fk
+        tags:
+            type: string
+            nullable: false
+            length: 250
+            options:
+                fixed: false
+            column: Tags
+        data:
+            type: string
+            nullable: true
+            length: 0
+            options:
+                fixed: false
+            column: Data
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }

@@ -1,0 +1,557 @@
+PenD\Docker\Application\Model\Outboundorders:
+    type: entity
+    repositoryClass: PenD\Docker\Application\Repository\OutboundordersRepository
+    table: OutboundOrders
+    indexes:
+        IX_OutboundOrders:
+            columns:
+                - OrderNumber
+                - OutboundOrderLineId
+    id:
+        outboundordersPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: OutboundOrders_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        groupguid:
+            type: guid
+            nullable: true
+            length: null
+            options:
+                fixed: false
+            column: GroupGuid
+        erpid:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: ErpId
+        outboundorderid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '-1'
+            column: OutboundOrderId
+        ordernumber:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: OrderNumber
+        dateordered:
+            type: datetime
+            nullable: true
+            column: DateOrdered
+        dateofdelivery:
+            type: datetime
+            nullable: true
+            column: DateOfDelivery
+        description:
+            type: string
+            nullable: true
+            length: 1000
+            options:
+                fixed: false
+            column: Description
+        projectcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ProjectCode
+        projectname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ProjectName
+        businessunit:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: BusinessUnit
+        salesrepresentative:
+            type: string
+            nullable: true
+            length: 250
+            options:
+                fixed: false
+            column: SalesRepresentative
+        customerreference:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: CustomerReference
+        customernumber:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: CustomerNumber
+        customername:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CustomerName
+        customeraddressline1:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerAddressLine1
+        customeraddressline2:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerAddressLine2
+        customeraddressline3:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerAddressLine3
+        customerzipcode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: CustomerZipCode
+        customercity:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerCity
+        customerstate:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerState
+        customercountrycode:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: false
+            column: CustomerCountryCode
+        customercountryname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerCountryName
+        customercontact:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: CustomerContact
+        customercontactemail:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: CustomerContactEmail
+        customerphonenumber:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: CustomerPhoneNumber
+        customerinvoicenumber:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: CustomerInvoiceNumber
+        customerinvoicename:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CustomerInvoiceName
+        customerinvoiceaddressline1:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerInvoiceAddressLine1
+        customerinvoiceaddressline2:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerInvoiceAddressLine2
+        customerinvoiceaddressline3:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerInvoiceAddressLine3
+        customerinvoicezipcode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: CustomerInvoiceZipCode
+        customerinvoicecity:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerInvoiceCity
+        customerinvoicestate:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerInvoiceState
+        customerinvoicecountrycode:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: false
+            column: CustomerInvoiceCountryCode
+        customerinvoicecountryname:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: CustomerInvoiceCountryName
+        customerinvoicecontactemail:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: CustomerInvoiceContactEmail
+        customerinvoicecontact:
+            type: string
+            nullable: true
+            length: 256
+            options:
+                fixed: false
+            column: CustomerInvoiceContact
+        customerinvoicephonenumber:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: CustomerInvoicePhoneNumber
+        deliverymethod:
+            type: string
+            nullable: true
+            length: 40
+            options:
+                fixed: false
+            column: DeliveryMethod
+        warehouse:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: Warehouse
+        warehouselocation:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: WarehouseLocation
+        selectioncode:
+            type: string
+            nullable: true
+            length: 10
+            options:
+                fixed: false
+            column: SelectionCode
+        selectioncodedescription:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: SelectionCodeDescription
+        routingcode:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: RoutingCode
+        outboundorderlineid:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '-1'
+            column: OutboundOrderLineId
+        linenumber:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '-1'
+            column: LineNumber
+        itemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemCode
+        customeritemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: CustomerItemCode
+        defaultvendoritemcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: DefaultVendorItemCode
+        defaultvendorbarcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: DefaultVendorBarcode
+        quantityordered:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityOrdered
+        quantitydelivered:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityDelivered
+        quantitytodeliver:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: QuantityToDeliver
+        linedateofdelivery:
+            type: datetime
+            nullable: true
+            column: LineDateOfDelivery
+        linerequesteddate:
+            type: datetime
+            nullable: true
+            column: LineRequestedDate
+        lineinstruction:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: LineInstruction
+        linedescription:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: LineDescription
+        isbatchnumberitem:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsBatchNumberItem
+        isserialnumberitem:
+            type: boolean
+            nullable: false
+            options:
+                default: '0'
+            column: IsSerialNumberItem
+        lineitemidentifier:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: LineItemIdentifier
+        itemweight:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: ItemWeight
+        itemdimensions:
+            type: string
+            nullable: true
+            length: 20
+            options:
+                fixed: false
+            column: ItemDimensions
+        itemlongdescription:
+            type: string
+            nullable: true
+            length: 2000
+            options:
+                fixed: false
+            column: ItemLongDescription
+        itemdescription:
+            type: string
+            nullable: true
+            length: 100
+            options:
+                fixed: false
+            column: ItemDescription
+        itembrand:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemBrand
+        linecurrencycode:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: false
+            column: LineCurrencyCode
+        itemsalesprice:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: ItemSalesPrice
+        itempurchaseprice:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: ItemPurchasePrice
+        itemsalespricewithvat:
+            type: decimal
+            nullable: false
+            precision: 19
+            scale: 4
+            options:
+                default: '0'
+            column: ItemSalesPriceWithVat
+        isfractionallowed:
+            type: boolean
+            nullable: true
+            options:
+                default: '0'
+            column: IsFractionAllowed
+        itemunitcode:
+            type: string
+            nullable: true
+            length: 50
+            options:
+                fixed: false
+            column: ItemUnitCode
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    manyToMany:
+        shipmentpackages:
+            targetEntity: PenD\Docker\Application\Model\Shipmentpackages
+            inversedBy: outboundorders
+            joinTable:
+                name: Shipmentpackageitems
+                joinColumns:
+                    OutboundOrder_fk:
+                        referencedColumnName: OutboundOrders_pk
+                inverseJoinColumns:
+                    ShipmentPackage_fk:
+                        referencedColumnName: ShipmentPackage_pk
+    lifecycleCallbacks: {  }

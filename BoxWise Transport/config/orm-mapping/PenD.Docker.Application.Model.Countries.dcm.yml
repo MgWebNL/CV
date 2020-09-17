@@ -1,0 +1,114 @@
+PenD\Docker\Application\Model\Countries:
+    type: entity
+    table: Countries
+    uniqueConstraints:
+        IX_Countries_IsoCode:
+            columns:
+                - IsoCode
+    id:
+        countryPk:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: Country_pk
+            generator:
+                strategy: IDENTITY
+    fields:
+        code:
+            type: string
+            nullable: true
+            length: 3
+            options:
+                fixed: true
+            column: Code
+        isocode:
+            type: string
+            nullable: false
+            length: 2
+            options:
+                fixed: true
+            column: IsoCode
+        isonr:
+            type: string
+            nullable: false
+            length: 3
+            options:
+                fixed: true
+            column: IsoNr
+        isocurrencycode:
+            type: string
+            nullable: false
+            length: 3
+            options:
+                fixed: true
+            column: IsoCurrencyCode
+        name:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: Name
+        membereu:
+            type: boolean
+            nullable: false
+            column: MemberEU
+        region:
+            type: string
+            nullable: false
+            length: 256
+            options:
+                fixed: false
+            column: Region
+        vatduty:
+            type: boolean
+            nullable: false
+            column: VATduty
+        exchangerate:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: ExchangeRate
+        active:
+            type: boolean
+            nullable: false
+            column: Active
+        createdon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: CreatedOn
+        createdby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: CreatedBy
+        modifiedon:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: ModifiedOn
+        modifiedby:
+            type: string
+            nullable: false
+            length: 50
+            options:
+                fixed: false
+                default: SYSTEM
+            column: ModifiedBy
+        rowversion:
+            type: string
+            nullable: false
+            length: 8
+            options:
+                fixed: false
+            column: RowVersion
+    lifecycleCallbacks: {  }
